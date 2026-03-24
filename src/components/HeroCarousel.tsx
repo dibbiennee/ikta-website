@@ -4,11 +4,14 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const heroImages = [
-  '/hero/hero1.jpg',
-  '/hero/hero2.jpg',
-  '/hero/hero3.jpg',
-  '/hero/hero4.jpg',
-  '/hero/hero5.jpg',
+  { src: '/hero/homescorre2.jpg', objectPosition: 'center top', fit: 'cover' as const },
+  { src: '/hero/homescorre3.jpg', objectPosition: 'center center', fit: 'cover' as const },
+  { src: '/hero/cinturagiallaikta.jpg', objectPosition: 'center center', fit: 'contain' as const },
+  { src: '/hero/hero2.jpg', objectPosition: 'center center', fit: 'cover' as const },
+  { src: '/hero/fotohomeikta11.jpg', objectPosition: 'center center', fit: 'cover' as const },
+  { src: '/hero/hero3.jpg', objectPosition: 'center center', fit: 'cover' as const },
+  { src: '/hero/hero4.jpg', objectPosition: 'center center', fit: 'cover' as const },
+  { src: '/hero/hero5.jpg', objectPosition: 'center center', fit: 'cover' as const },
 ];
 
 export default function HeroCarousel() {
@@ -25,21 +28,25 @@ export default function HeroCarousel() {
   return (
     <div className="absolute inset-0 w-full h-full overflow-hidden">
       {/* Images */}
-      {heroImages.map((src, index) => (
+      {heroImages.map((image, index) => (
         <div
-          key={src}
+          key={image.src}
           className="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
           style={{
             opacity: index === currentIndex ? 1 : 0,
+            backgroundColor: image.fit === 'contain' ? '#000' : 'transparent',
           }}
         >
           <Image
-            src={src}
+            src={image.src}
             alt={`IKTA Hero ${index + 1}`}
             fill
-            className="object-cover"
+            className={image.fit === 'contain' ? 'object-contain' : 'object-cover'}
+            style={{ objectPosition: image.objectPosition }}
             priority={index === 0}
+            loading={index === 0 ? 'eager' : 'lazy'}
             sizes="100vw"
+            quality={80}
           />
         </div>
       ))}

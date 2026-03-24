@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset per header fisso quando si naviga agli anchor */
+[id] {
+  scroll-margin-top: 100px;
+}
+
 :root {
   /* Brand Colors - IKTA */
   --ikta-black: #0a0a0a;
@@ -44,18 +53,16 @@
   --font-mono: var(--font-geist-mono);
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 html {
   scrollbar-gutter: stable;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -229,5 +236,73 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-menu.open {
   transform: translateX(0);
+}
+
+/* Safe area for iPhone notch/home indicator */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 1023px) {
+  /* Ensure footer has space for bottom nav */
+  footer {
+    padding-bottom: 5rem;
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 1023px) {
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Snap scroll for mobile galleries */
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-mandatory {
+  scroll-snap-type: x mandatory;
+}
+
+/* Hide scrollbar but keep functionality */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
 }
 

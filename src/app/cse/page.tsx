@@ -10,25 +10,13 @@ export const metadata: Metadata = {
 export default function CSEPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section style={{ marginTop: '100px' }} className="relative py-24 md:py-36 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Combat System Evolution
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300" style={{ textAlign: 'center' }}>
-            &quot;Un&apos;innovazione nel sistema di apprendimento delle arti marziali.&quot;
-          </p>
-        </div>
-      </section>
-
       {/* Intro Section */}
-      <section id="cos-e" className="section">
+      <section id="cos-e" className="section" style={{ marginTop: '100px' }}>
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Introduzione</span>
-              <h2 className="text-3xl md:text-5xl font-bold mt-2">Cos&apos;è il CSE?</h2>
+              <h1 className="text-3xl md:text-5xl font-bold mt-2">Cos&apos;è il CSE?</h1>
             </div>
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
@@ -218,7 +206,7 @@ export default function CSEPage() {
             <div className="text-center mb-12">
               <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Progressione</span>
               <h2 className="text-3xl md:text-5xl font-bold mt-2">Il Percorso delle Cinture</h2>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
                 Un sistema strutturato di gradi che permette all&apos;allievo di avere obiettivi chiari e tangibili.
               </p>
             </div>
@@ -302,7 +290,7 @@ export default function CSEPage() {
             <div className="text-center mb-12">
               <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Identità</span>
               <h2 className="text-3xl md:text-5xl font-bold mt-2">Le Divise CSE</h2>
-              <p className="text-gray-600 mt-4">
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
                 L&apos;abbigliamento ufficiale che identifica i praticanti del Combat System Evolution.
               </p>
             </div>
@@ -330,7 +318,7 @@ export default function CSEPage() {
                 più impegno, più disciplina, più resistenza e più forza di volontà. Ed è proprio per questo
                 che diventare dei guerrieri moderni è oggi più che mai fondamentale per raggiungere dei veri risultati.
               </p>
-              <p className="text-gray-300 mb-8">
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Il CSE è un percorso che permette alle persone di allenare in modo efficiente il guerriero
                 che è in loro e che le aiuta non solo a difendersi ma soprattutto a vivere in modo migliore
                 le sfide della quotidianità.
@@ -346,7 +334,7 @@ export default function CSEPage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Vuoi Praticare il CSE?
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Trova una palestra IKTA dove praticare il Combat System Evolution o diventa istruttore certificato.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

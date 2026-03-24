@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "IKTA | Federazione Sport da Combattimento",
+    default: "IKTA Italia | Federazione Kick Boxing, Muay Thai, MMA e Krav Maga",
     template: "%s | IKTA",
   },
   description:
-    "IKTA - Intercontinental Kick Thai Boxing Association. Federazione di Kick Boxing, Thai Boxe, Combat System Evolution e altre discipline da combattimento. Formazione, gare, ranking e affiliazioni.",
+    "IKTA - Intercontinental Kick Thai Boxing Association. Federazione internazionale di sport da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga, BJJ e Boxe. 50+ palestre affiliate in Italia, formazione certificata e gare ufficiali.",
   keywords: [
     "IKTA",
     "federazione kick boxing",
@@ -30,16 +31,27 @@ export const metadata: Metadata = {
     "arti marziali",
     "kick boxing",
     "formazione istruttori",
+    "MMA",
+    "krav maga",
+    "BJJ",
+    "federazione muay thai",
+    "federazione MMA Italia",
   ],
   authors: [{ name: "IKTA" }],
   openGraph: {
     type: "website",
     locale: "it_IT",
-    url: "https://ikta.it",
-    siteName: "IKTA",
-    title: "IKTA | Federazione Sport da Combattimento",
+    url: "https://iktaworld.com",
+    siteName: "IKTA World",
+    title: "IKTA Italia | Federazione Kick Boxing, Muay Thai, MMA e Krav Maga",
     description:
-      "Federazione di Kick Boxing, Thai Boxe, Combat System Evolution e altre discipline da combattimento.",
+      "Federazione internazionale di sport da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga, BJJ e Boxe. 50+ palestre affiliate, formazione certificata e gare ufficiali.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IKTA Italia | Federazione Kick Boxing, Muay Thai, MMA",
+    description:
+      "Federazione internazionale di sport da combattimento. 50+ palestre affiliate, formazione certificata, gare ufficiali e titoli omologati.",
   },
 };
 
@@ -50,11 +62,60 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preload"
+          as="image"
+          href="/_next/image?url=%2Fhero%2Fhomescorre2.jpg&w=1920&q=80"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SportsOrganization",
+              "name": "IKTA - Intercontinental Kick Thai Boxing Association",
+              "alternateName": "IKTA Italia",
+              "url": "https://iktaworld.com",
+              "description": "Federazione internazionale di sport da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga, BJJ, Boxe, Kung Fu Sanda e Karate.",
+              "foundingDate": "2012",
+              "sport": ["Kick Boxing", "Muay Thai", "MMA", "Krav Maga", "Brazilian Jiu Jitsu", "Boxe", "Kung Fu Sanda", "Karate"],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Via Ticino 15",
+                "addressLocality": "Civitavecchia",
+                "addressRegion": "RM",
+                "addressCountry": "IT",
+              },
+              "telephone": "+393384012397",
+              "sameAs": [
+                "https://www.instagram.com/iktaitalia",
+                "https://it.wikipedia.org/wiki/I.K.T.A._Intercontinental_Kick_Thai_Boxing_Association_Italia",
+              ],
+              "memberOf": {
+                "@type": "SportsOrganization",
+                "name": "IKTA World",
+              },
+              "logo": "https://iktaworld.com/logo-ikta.png",
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Skip Navigation Link - Accessibilita WCAG */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-[#1e40af] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-medium focus:shadow-lg"
+        >
+          Salta al contenuto principale
+        </a>
+        <ScrollToTop />
         <Header />
-        <main>
+        <main id="main-content">
           {children}
         </main>
         <Footer />

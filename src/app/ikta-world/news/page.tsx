@@ -50,7 +50,7 @@ export default function NewsPage() {
           <span style={{ fontSize: '13px', fontWeight: 600, color: '#1e40af', textTransform: 'uppercase', letterSpacing: '2px' }}>
             IKTA World
           </span>
-          <h2 style={{ fontSize: '40px', fontWeight: 700, marginTop: '8px' }}>News</h2>
+          <h1 style={{ fontSize: '40px', fontWeight: 700, marginTop: '8px' }}>News</h1>
         </div>
       </div>
 
