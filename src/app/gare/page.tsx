@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 const upcomingEvents = [
   {
     name: 'GOLDEN WARRIOR',
-    date: 'Domenica 8 Marzo 2026 — ore 09:00',
+    date: 'Domenica 8 Marzo 2026, ore 09:00',
     location: 'Pala Sport Santa Marinella',
     disciplines: ['Light', 'KO'],
   },
   {
     name: 'THE BEST OF THE BEST',
-    date: 'Venerdì 19 e Sabato 20 Giugno 2026 — ore 20:00',
+    date: 'Venerdì 19 e Sabato 20 Giugno 2026, ore 20:00',
     location: 'Arena del Parco dell\'Oliveto, Via Adige 1, Civitavecchia',
     disciplines: ['Kick Boxing', 'Free Boxing', 'MMA'],
   },
@@ -28,11 +28,11 @@ export default function GarePage() {
   return (
     <>
       {/* GALLERIA EVENTI */}
-      <section className="section" style={{ marginTop: '100px' }}>
+      <section className="section pt-28 md:pt-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Galleria</span>
-            <h1 className="text-3xl md:text-5xl font-bold mt-2">Eventi Passati e Futuri</h1>
+            <span className="eyebrow">Galleria</span>
+            <h1 className="mt-2">Eventi e gare</h1>
             <p className="text-gray-600 max-w-2xl mx-auto mt-4">
               Le locandine dei nostri eventi di Kick Boxing, Muay Thai e altre discipline da combattimento.
             </p>
@@ -55,7 +55,7 @@ export default function GarePage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {upcomingEvents.map((event) => (
-              <div key={event.name} className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow border border-gray-100" style={{ padding: '2rem' }}>
+              <div key={event.name} className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 p-8">
                 <h3 className="text-xl sm:text-2xl font-bold mb-3">{event.name}</h3>
                 <p className="text-[#1e40af] font-medium mb-4 flex items-center gap-2">
                   <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">

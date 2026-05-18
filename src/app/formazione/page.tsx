@@ -117,14 +117,13 @@ export default function FormazionePage() {
   return (
     <>
       {/* 1. CORSI */}
-      <section id="corsi" className="section" style={{ marginTop: '100px' }}>
+      <section id="corsi" className="section pt-28 md:pt-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Formazione</span>
-            <h1 className="text-3xl md:text-5xl font-bold mt-2">Corsi</h1>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-              Cinque discipline con tre livelli di formazione progressiva per costruire la tua carriera
-              nell&apos;insegnamento delle discipline da combattimento.
+            <span className="eyebrow">Formazione certificata</span>
+            <h1 className="mt-2">Diventa istruttore IKTA</h1>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-4">
+              Cinque discipline, tre livelli (Allenatore, Istruttore, Maestro), formato FAD online disponibile 24/7. Diploma riconosciuto e iscrizione all&apos;albo federale.
             </p>
           </div>
 
@@ -136,10 +135,10 @@ export default function FormazionePage() {
       <section id="albo-istruttori" className="section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Certificati</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">Albo Istruttori</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-              Elenco completo degli allenatori, istruttori, maestri e ufficiali di gara certificati IKTA.
+            <span className="eyebrow">Certificati</span>
+            <h2 className="mt-2">Albo Istruttori</h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-4">
+              Elenco completo degli allenatori, istruttori, maestri e ufficiali di gara certificati IKTA. Tutti i diplomi sono nominativi e verificabili.
             </p>
           </div>
 
@@ -291,25 +290,27 @@ export default function FormazionePage() {
         </div>
       </section>
 
-      {/* 4. CALENDARIO CORSI */}
+      {/* 4. COME FUNZIONA */}
       <section id="calendario" className="section bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Prossimi Appuntamenti</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">Calendario Corsi</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-              Prossimi corsi in programma. Contattaci per iscriverti o per richiedere
-              l&apos;organizzazione di un corso nella tua zona.
+            <span className="eyebrow">Come funziona</span>
+            <h2 className="mt-2">Tre livelli, formato FAD online</h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-4">
+              Il percorso e in didattica a distanza: studi quando vuoi, accesso 24/7 al materiale. Le sessioni di esame sono periodiche, contattaci per il calendario aggiornato.
             </p>
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-xl overflow-hidden border border-gray-200 shadow-md p-8 text-center">
-              <svg className="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <div className="bg-white rounded-xl border border-gray-200 shadow-md p-8 text-center">
+              <svg className="w-16 h-16 text-[#1e40af] mx-auto mb-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
               </svg>
-              <p className="text-xl font-semibold text-gray-700 mb-2">Date in arrivo prossimamente</p>
-              <p className="text-gray-500">Contattaci per maggiori informazioni sui prossimi corsi.</p>
+              <p className="text-xl font-semibold text-gray-900 mb-2">Pronto a iscriverti?</p>
+              <p className="text-gray-600 mb-6">Scrivici su WhatsApp: ti diciamo subito quando parte la prossima sessione e cosa serve per partecipare.</p>
+              <Link href="/contatti" className="btn btn-primary">
+                Richiedi il calendario
+              </Link>
             </div>
           </div>
         </div>
@@ -318,15 +319,14 @@ export default function FormazionePage() {
       {/* CTA Section */}
       <section className="section-dark section">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Vuoi Organizzare un Corso nella Tua Zona?
+          <h2 className="mb-6">
+            Hai una palestra? Organizza un corso IKTA in sede
           </h2>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Contattaci per richiedere l&apos;organizzazione di un corso IKTA
-            presso la tua palestra o nella tua città.
+          <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-base md:text-lg">
+            Se gestisci una palestra o una scuola di arti marziali, possiamo portare un corso direttamente da te. Modulo presenziale o ibrido FAD + workshop pratico.
           </p>
-          <Link href="/contatti" className="btn bg-white text-gray-900 hover:bg-gray-100 px-8">
-            Contattaci
+          <Link href="/contatti" className="btn btn-primary">
+            Parliamo del tuo corso
           </Link>
         </div>
       </section>

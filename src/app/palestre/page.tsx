@@ -7,18 +7,19 @@ export const metadata: Metadata = {
   description: 'Trova le palestre IKTA Gym affiliate. Sedi ufficiali per Kick Boxing, Muay Thai e altre discipline.',
 };
 
+const BRAND_BLUE = '#1e40af';
+const BRAND_BLUE_HOVER = '#1e3a8a';
+
 export default function PalestrePage() {
   return (
     <>
       {/* Sedi IKTA GYM */}
-      <section className="section bg-gradient-to-b from-gray-50 to-white" style={{ marginTop: '100px' }}>
+      <section className="section bg-gradient-to-b from-gray-50 to-white pt-28 md:pt-32">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-8 sm:mb-16">
-            <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-[#1e40af]/10 text-[#1e40af] text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
-              Le Nostre Sedi
-            </span>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 text-center">IKTA GYM</h1>
-            <p className="text-sm sm:text-base text-gray-600 text-center max-w-2xl px-2">
+            <span className="eyebrow mb-3">Le Nostre Sedi</span>
+            <h1 className="text-center">IKTA GYM</h1>
+            <p className="text-base text-gray-600 text-center max-w-2xl px-2 mt-3">
               Palestre ufficiali dove allenarti con istruttori certificati IKTA
             </p>
           </div>
@@ -26,8 +27,8 @@ export default function PalestrePage() {
           <div className="grid gap-6 lg:gap-12">
             <SedeCard
               name="IKTA GYM Santa Marinella"
-              color="#e30613"
-              colorHover="#c00510"
+              color={BRAND_BLUE}
+              colorHover={BRAND_BLUE_HOVER}
               logo="/sedi/santamarinella/iktasantalogo.webp"
               address="Via 4 Novembre n 25, Santa Marinella"
               phone="+39 348 5913895"
@@ -43,8 +44,8 @@ export default function PalestrePage() {
 
             <SedeCard
               name="IKTA GYM Civitavecchia"
-              color="#c71585"
-              colorHover="#a01270"
+              color={BRAND_BLUE}
+              colorHover={BRAND_BLUE_HOVER}
               logo="/sedi/civitavecchia/iktacvlogo.webp"
               address="Via Ticino n 15, Civitavecchia"
               phone="+39 338 4012397"
@@ -65,8 +66,8 @@ export default function PalestrePage() {
 
             <SedeCard
               name="IKTA GYM Tolfa"
-              color="#00c853"
-              colorHover="#00a844"
+              color={BRAND_BLUE}
+              colorHover={BRAND_BLUE_HOVER}
               logo="/sedi/tolfa/iktatolfalogo.webp"
               address="Via G. Amendola 1A, Tolfa"
               phone="+39 338 4012397"
@@ -81,8 +82,8 @@ export default function PalestrePage() {
             />
           </div>
 
-          <div className="text-center px-4 sm:px-0" style={{ marginTop: '4rem' }}>
-            <Link href="/contatti" className="btn bg-[#1e40af] text-white hover:bg-[#1e3a8a] px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto justify-center">
+          <div className="text-center px-4 sm:px-0 mt-16">
+            <Link href="/contatti" className="btn btn-secondary">
               Contattaci
             </Link>
           </div>
@@ -92,14 +93,13 @@ export default function PalestrePage() {
       {/* CTA Section */}
       <section className="section-dark section">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Vuoi Aprire una Sede IKTA Gym?
+          <h2 className="mb-6">
+            Vuoi aprire una sede IKTA Gym?
           </h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Affilia la tua palestra a IKTA e diventa parte della nostra rete.
-            Supporto tecnico, formazione e visibilità.
+            Affilia la tua palestra a IKTA: supporto tecnico, formazione certificata e visibilita nazionale.
           </p>
-          <Link href="/affiliazione" className="btn bg-white text-gray-900 hover:bg-gray-100 px-8">
+          <Link href="/affiliazione" className="btn btn-primary">
             Richiedi Affiliazione
           </Link>
         </div>

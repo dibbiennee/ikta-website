@@ -17,11 +17,11 @@ const sections = [
 
 export default function IktaWorldPage() {
   return (
-    <section className="section" style={{ marginTop: '100px' }}>
+    <section className="section pt-28 md:pt-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Internazionale</span>
-          <h1 className="text-3xl md:text-5xl font-bold mt-2">IKTA World</h1>
+          <span className="eyebrow">Internazionale</span>
+          <h1 className="mt-2">IKTA World</h1>
           <p className="text-gray-600 max-w-2xl mx-auto mt-4">
             La nostra presenza nel mondo degli sport da combattimento a livello internazionale.
           </p>
