@@ -17,5 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://iktaworld.com/ikta-world/cinture-kick-boxe', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: 'https://iktaworld.com/ikta-world/cinture-krav-maga', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: 'https://iktaworld.com/ikta-world/new-world-record', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: 'https://iktaworld.com/privacy', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    { url: 'https://iktaworld.com/cookie-policy', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
   ]
 }
