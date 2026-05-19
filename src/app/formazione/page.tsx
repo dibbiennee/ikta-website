@@ -21,7 +21,6 @@ const alboAllenatori = [
   { name: 'Antonio La Musta', discipline: 'K1 Style', date: '20/09/2014' },
   { name: 'Stefano Sgrulloni', discipline: 'Kick Boxing', date: '08/01/2016' },
   { name: 'Manuel Mammetti', discipline: 'Pugilato', date: '28/01/2026' },
-  { name: 'Massimiliano Bottoni', discipline: 'Difesa Personale', date: '28/01/2026' },
 ];
 
 const alboIstruttori = [
