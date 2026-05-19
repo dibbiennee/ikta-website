@@ -90,6 +90,7 @@ const alboMaestri = [
   { name: 'Giuseppe Mariotti', discipline: 'Kick Boxing', date: '03/08/2015' },
   { name: 'Umberto Lucci', discipline: 'Kick Boxing', date: '08/01/2016' },
   { name: 'Giuseppe Mariotti', discipline: 'K1 Style', date: '24/06/2016' },
+  { name: 'Massimiliano Bottoni', discipline: 'Pugilato', date: '19/03/2025' },
   { name: 'Marcello Giannini', discipline: 'Kick Boxing', date: '28/01/2026' },
 ];
 

@@ -18,9 +18,9 @@ const upcomingEvents = [
   },
   {
     name: 'THE BEST OF THE BEST',
-    date: 'Venerdì 19 e Sabato 20 Giugno 2026, ore 20:00',
+    date: 'Venerdì 19 e Sabato 20 Giugno 2026, ore 21:00',
     location: 'Arena del Parco dell\'Oliveto, Via Adige 1, Civitavecchia',
-    disciplines: ['Kick Boxing', 'Free Boxing', 'MMA'],
+    disciplines: ['Full Contact', 'Boxe', 'Kick Boxing Light', 'Free Boxing'],
   },
 ];
 

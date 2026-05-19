@@ -61,8 +61,8 @@ html {
   --section-py-desktop: 7rem;
 
   /* Typography fonts */
-  --font-display: "Clash Display", "Bebas Neue", system-ui, -apple-system, sans-serif;
-  --font-body: "Satoshi", "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-body: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
 }
 
 @theme inline {
@@ -98,47 +98,18 @@ html {
   body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-body);
+    font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Typography - scala fluida coerente, in @layer base così le utility Tailwind possono override */
+  /* Typography - default weight (font-family ereditato dal body via Geist) */
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    color: inherit;
-  }
-
-  h1 {
-    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
     font-weight: 700;
+    line-height: 1.2;
     letter-spacing: -0.02em;
-  }
-
-  h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-  }
-
-  h3 {
-    font-size: clamp(1.5rem, 2.5vw, 2rem);
-  }
-
-  h4 {
-    font-size: clamp(1.25rem, 1.8vw, 1.5rem);
-  }
-
-  h5 {
-    font-size: 1.125rem;
-  }
-
-  h6 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+    color: inherit;
   }
 }
 
