@@ -26,10 +26,10 @@ const eventiPassati: EventPhoto[] = [
   { src: '/foto-eventi/28SETT.jpg', alt: 'Evento 28 settembre' },
 ];
 
-function PhotoGrid({ photos }: { photos: EventPhoto[] }) {
+function PhotoGrid({ photos, priorityCount = 0 }: { photos: EventPhoto[]; priorityCount?: number }) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-      {photos.map((photo) => (
+      {photos.map((photo, idx) => (
         <div
           key={photo.src}
           className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 bg-gray-50 hover:-translate-y-1"
@@ -41,6 +41,8 @@ function PhotoGrid({ photos }: { photos: EventPhoto[] }) {
               fill
               className="object-contain"
               sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              priority={idx < priorityCount}
+              loading={idx < priorityCount ? undefined : 'lazy'}
             />
           </div>
         </div>
@@ -57,7 +59,7 @@ export default function EventGallery() {
           <span className="eyebrow">Prossimi eventi</span>
           <h3 className="mt-2">In arrivo a giugno 2026</h3>
         </div>
-        <PhotoGrid photos={eventiFuturi} />
+        <PhotoGrid photos={eventiFuturi} priorityCount={2} />
       </div>
 
       <div>
