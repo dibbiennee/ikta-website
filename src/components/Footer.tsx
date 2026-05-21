@@ -150,6 +150,17 @@ export default function Footer() {
               </Link>
             </div>
           </div>
+          <p className="mt-4 text-center text-xs text-gray-500">
+            Designed &amp; built by{' '}
+            <a
+              href="https://satoshiweb.it"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              satoshiweb.it
+            </a>
+          </p>
         </div>
       </div>
     </footer>
