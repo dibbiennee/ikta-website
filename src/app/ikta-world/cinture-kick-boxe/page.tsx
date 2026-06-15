@@ -2,32 +2,22 @@
 
 const belts = [
   {
-    id: '10-kyu',
-    label: '10 KYU - Cintura Bianca con I Striscia Rossa',
+    id: 'bianca',
+    label: 'Cintura Bianca',
     color: '#e5e7eb',
     textColor: '#111827',
-    border: '2px solid #ef4444',
     members: [
       { name: "Bato' Laszlo'", date: '29/1/2021' },
       { name: 'Sotko Zoltan', date: '29/1/2021' },
       { name: 'Korbuly Kristof', date: '29/1/2021' },
       { name: 'Pal Judit', date: '10/03/2022' },
-    ],
-  },
-  {
-    id: '9-kyu',
-    label: '9 KYU - Cintura Bianca con II Striscie Rosse',
-    color: '#e5e7eb',
-    textColor: '#111827',
-    border: '2px solid #ef4444',
-    members: [
       { name: "Szabo' Dominik", date: '31/7/2020' },
       { name: 'Szirmai Arina Hilda', date: '29/1/2021' },
     ],
   },
   {
-    id: '8-kyu',
-    label: '8 KYU - Cintura Gialla',
+    id: 'gialla',
+    label: 'Cintura Gialla',
     color: '#eab308',
     textColor: '#111827',
     members: [
@@ -153,14 +143,7 @@ const belts = [
       { name: 'Filippo Albano', date: '22/12/2025' },
       { name: 'Camaiani Arianna', date: '22/12/2025' },
       { name: 'Camaiani Massimiliano', date: '22/12/2025' },
-    ],
-  },
-  {
-    id: '7-kyu',
-    label: '7 KYU - Cintura Gialla con 2 Striscie Rosse',
-    color: '#eab308',
-    textColor: '#111827',
-    members: [
+      { name: 'Emanuele Mancini', date: '20/6/2026' },
       { name: 'Szirmai Hunor Laszlo', date: '29/1/2021' },
       { name: 'Szabo Dominik', date: '29/1/2021' },
       { name: 'Kanalas Sandor', date: '29/1/2021' },
@@ -168,8 +151,8 @@ const belts = [
     ],
   },
   {
-    id: '6-kyu-arancione',
-    label: '6 KYU - Cintura Arancione',
+    id: 'arancione',
+    label: 'Cintura Arancione',
     color: '#ea580c',
     members: [
       { name: 'Sergei Parlante', date: '7/12/2013' },
@@ -242,11 +225,15 @@ const belts = [
       { name: 'Yahya Mounir', date: '30/6/2025' },
       { name: 'Mounir Yousra', date: '30/6/2025' },
       { name: 'Bakary Dumbuya', date: '30/6/2025' },
+      { name: 'Gianfranco Casaccio', date: '20/6/2026' },
+      { name: 'Annalisa Scroccarello', date: '20/6/2026' },
+      { name: 'Flavio Della Pelle', date: '20/6/2026' },
+      { name: 'Vincenzo Altieri', date: '20/6/2026' },
     ],
   },
   {
-    id: '6-kyu-verde',
-    label: '6 KYU - Cintura Verde',
+    id: 'verde',
+    label: 'Cintura Verde',
     color: '#16a34a',
     members: [
       { name: 'Daniel Iosub', date: '7/12/2013' },
@@ -283,11 +270,15 @@ const belts = [
       { name: 'Schiavon Michele', date: '30/6/2025' },
       { name: 'Jacopo Nardi', date: '30/6/2025' },
       { name: 'Antony Gabriel Canelon', date: '30/6/2025' },
+      { name: 'Barbara Di Antonio', date: '20/6/2026' },
+      { name: 'Yousra Mounir', date: '20/6/2026' },
+      { name: 'Bakary Dumbuya', date: '20/6/2026' },
+      { name: 'Lorenzo Balducci', date: '20/6/2026' },
     ],
   },
   {
-    id: '5-kyu',
-    label: '5 KYU - Cintura Blu',
+    id: 'blu',
+    label: 'Cintura Blu',
     color: '#2563eb',
     members: [
       { name: 'Francesco Caminiti', date: '7/12/2013' },
@@ -309,13 +300,9 @@ const belts = [
       { name: 'Bucs Benjamin', date: '23/6/2021' },
       { name: 'Piel Zita', date: '10/03/2022' },
       { name: 'Maila Pierannunzio', date: '26/2/2023' },
-    ],
-  },
-  {
-    id: '4-kyu',
-    label: '4 KYU - Cintura Blu con II Striscie Rosse',
-    color: '#2563eb',
-    members: [
+      { name: 'Paolo Di Battista', date: '20/6/2026' },
+      { name: 'Cristian Stanchieri', date: '20/6/2026' },
+      { name: 'Lorenzo Rossi', date: '20/6/2026' },
       { name: 'Sapi Bence', date: '23/6/2021' },
       { name: 'Bucs Benjamin', date: '10/03/2022' },
       { name: 'Szabo Dominik', date: '10/03/2022' },
@@ -323,8 +310,8 @@ const belts = [
     ],
   },
   {
-    id: '3-kyu',
-    label: '3 KYU - Cintura Marrone',
+    id: 'marrone',
+    label: 'Cintura Marrone',
     color: '#92400e',
     members: [
       { name: 'Marius Comanescu', date: '18/10/2014' },
@@ -342,13 +329,7 @@ const belts = [
       { name: 'Trippetta Francesca', date: '26/2/2023' },
       { name: 'Maila Pierannunzio', date: '16/6/2024' },
       { name: 'Giuseppe Bartolini', date: '30/6/2025' },
-    ],
-  },
-  {
-    id: '2-kyu',
-    label: '2 KYU - Cintura Marrone con II Strisce Rosse',
-    color: '#92400e',
-    members: [
+      { name: "Nicolo' Mariotti", date: '20/6/2026' },
       { name: 'Horvath Attila', date: '23/6/2021' },
     ],
   },
@@ -491,6 +472,7 @@ const belts = [
       { name: 'Erika Nogueira', date: '7/4/2025' },
       { name: 'Sthepania Ohnesorge Rucci', date: '7/4/2025' },
       { name: 'Filippo Bargigli', date: '22/12/2025' },
+      { name: 'Maila Pierannunzio', date: '20/6/2026' },
     ],
   },
   {

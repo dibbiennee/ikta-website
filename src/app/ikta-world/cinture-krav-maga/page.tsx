@@ -47,6 +47,8 @@ const belts = [
       { name: 'Simone Pujia', date: '20/11/2019' },
       { name: 'Anna Di Felice', date: '14/6/2024' },
       { name: 'Matteo Colantoni', date: '16/6/2024' },
+      { name: 'Francesco Nunez', date: '20/6/2026' },
+      { name: 'Gabriella La Torre', date: '20/6/2026' },
     ],
   },
   {
@@ -56,6 +58,7 @@ const belts = [
     members: [
       { name: 'Alberto Grassi', date: '5/12/2019' },
       { name: 'Daniele Lauri', date: '5/12/2019' },
+      { name: 'Aurora Grossi', date: '20/6/2026' },
     ],
   },
   {
@@ -65,6 +68,7 @@ const belts = [
     members: [
       { name: 'Saverio Leo', date: '20/11/2019' },
       { name: 'Giuseppe Bartolini', date: '16/6/2024' },
+      { name: 'Loris Marinozzi', date: '20/6/2026' },
     ],
   },
   {
@@ -74,6 +78,7 @@ const belts = [
     members: [
       { name: 'Leonardo Marchio', date: '20/11/2019' },
       { name: "Roberto D'Andrea", date: '20/11/2019' },
+      { name: 'Giuseppe Bartolini', date: '20/6/2026' },
     ],
   },
   {
