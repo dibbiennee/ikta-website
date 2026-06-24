@@ -80,6 +80,8 @@ const alboIstruttori = [
   { name: 'Igor Bastioni', discipline: 'Krav Maga', date: '14/03/2021' },
   { name: 'Marco Caramelli', discipline: 'Pugilato', date: '28/01/2026' },
   { name: 'Antonio Giacomini', discipline: 'Pugilato', date: '28/01/2026' },
+  { name: 'Rebecca Pallotta', discipline: 'Kick Boxing', date: '11/06/2026' },
+  { name: 'Simone Simonante', discipline: 'Pugilato', date: '11/06/2026' },
 ];
 
 const alboMaestri = [
