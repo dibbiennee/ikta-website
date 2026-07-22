@@ -435,6 +435,7 @@ const belts = [
       { name: 'Deivison Marinho De Jesus Santos', date: '21/5/2022' },
       { name: 'Abimael Ammon N Costa', date: '21/5/2022' },
       { name: 'Luis Guilerme Cabaceira', date: '21/5/2022' },
+      { name: 'Giuseppe Bartolini', date: '25/6/2022' },
       { name: 'Fabio Martinelli', date: '11/2/2023' },
       { name: 'Carlos Braganca Junior', date: '11/2/2023' },
       { name: 'Camilla Augusta De Mattos Perriera', date: '11/2/2023' },
