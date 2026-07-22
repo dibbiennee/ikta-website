@@ -328,7 +328,6 @@ const belts = [
       { name: 'Elda Forcella', date: '26/2/2023' },
       { name: 'Trippetta Francesca', date: '26/2/2023' },
       { name: 'Maila Pierannunzio', date: '16/6/2024' },
-      { name: 'Giuseppe Bartolini', date: '30/6/2025' },
       { name: "Nicolo' Mariotti", date: '20/6/2026' },
       { name: 'Horvath Attila', date: '23/6/2021' },
     ],

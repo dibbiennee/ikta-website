@@ -6,6 +6,12 @@ type EventPhoto = {
 };
 
 const eventiFuturi: EventPhoto[] = [
+  { src: '/foto-eventi/trofeo-roma.jpg', alt: '25 ottobre 2026, Trofeo Roma Kick Boxing e Free Boxing, Festival of Inclusion 3a edizione, Palatorrino Roma' },
+  { src: '/foto-eventi/victory4.jpg', alt: '28 novembre 2026, Victory IV Kick Boxing, Free Boxing e MMA, Jungle Palace Civitavecchia' },
+  { src: '/foto-eventi/golden-warrior-2027.jpg', alt: '7 marzo 2027, Golden Warrior Free Boxing, Kick Boxing e MMA, Santa Marinella' },
+];
+
+const eventiPassati: EventPhoto[] = [
   { src: '/foto-eventi/19GIUGNO_1.jpg', alt: '19 giugno 2026, Full Contact International: Crescentini vs Zequiri' },
   { src: '/foto-eventi/19GIUGNO_2.jpg', alt: '19 giugno 2026, Titolo Nazionale Kick Boxing Light: Castagnari vs Antegiovanni' },
   { src: '/foto-eventi/19GIUGNO_3.jpg', alt: '19 giugno 2026, Titolo Nazionale Kick Boxing Light Junior: Battaglini vs Pierini' },
@@ -14,9 +20,6 @@ const eventiFuturi: EventPhoto[] = [
   { src: '/foto-eventi/20GIUGNO_freeboxing.jpg', alt: '20 giugno 2026, Titolo Intercontinentale Free Boxing: Gicco vs Caramelli' },
   { src: '/foto-eventi/20GIUGNO_mondiale.jpg', alt: '20 giugno 2026, Titolo Mondiale WPKO Full Contact: Patrignani vs Thiago Luk' },
   { src: '/foto-eventi/20GIUGNO_nazionale.jpg', alt: '20 giugno 2026, Titolo Nazionale IKTA Full Contact: Boccetta vs Liccardo' },
-];
-
-const eventiPassati: EventPhoto[] = [
   { src: '/foto-eventi/8MARZ.jpg', alt: '8 marzo 2026, Golden Warrior' },
   { src: '/foto-eventi/alghero1.jpg', alt: '1 agosto 2025, evento Alghero, Sardegna (1 di 4)' },
   { src: '/foto-eventi/alghero2.jpg', alt: '1 agosto 2025, evento Alghero, Sardegna (2 di 4)' },
@@ -57,7 +60,7 @@ export default function EventGallery() {
       <div>
         <div className="text-center mb-8">
           <span className="eyebrow">Prossimi eventi</span>
-          <h3 className="mt-2">In arrivo a giugno 2026</h3>
+          <h3 className="mt-2">I prossimi appuntamenti</h3>
         </div>
         <PhotoGrid photos={eventiFuturi} priorityCount={2} />
       </div>

@@ -11,16 +11,22 @@ export const metadata: Metadata = {
 
 const upcomingEvents = [
   {
-    name: 'GOLDEN WARRIOR',
-    date: 'Domenica 8 Marzo 2026, ore 09:00',
-    location: 'Pala Sport Santa Marinella',
-    disciplines: ['Light', 'KO'],
+    name: 'TROFEO ROMA',
+    date: 'Domenica 25 Ottobre 2026, ore 17:00 (iscrizioni ore 16:00)',
+    location: 'Palatorrino, Roma',
+    disciplines: ['Kick Boxing', 'Free Boxing'],
   },
   {
-    name: 'THE BEST OF THE BEST',
-    date: 'Venerdì 19 e Sabato 20 Giugno 2026, ore 21:00',
-    location: 'Arena del Parco dell\'Oliveto, Via Adige 1, Civitavecchia',
-    disciplines: ['Full Contact', 'Boxe', 'Kick Boxing Light', 'Free Boxing'],
+    name: 'VICTORY IV',
+    date: 'Sabato 28 Novembre 2026, ore 17:00 (iscrizioni ore 16:00)',
+    location: 'Jungle Palace, Via Maratona 5, Civitavecchia',
+    disciplines: ['Kick Boxing', 'Free Boxing', 'MMA'],
+  },
+  {
+    name: 'GOLDEN WARRIOR',
+    date: 'Domenica 7 Marzo 2027, ore 10:00 (pesi ore 09:00)',
+    location: 'Palestra Giosuè Carducci, Piazzale della Gioventù 1, Santa Marinella',
+    disciplines: ['Free Boxing', 'Kick Boxing', 'MMA'],
   },
 ];
 
