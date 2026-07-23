@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://iktaworld.com/gare', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
     { url: 'https://iktaworld.com/affiliazione', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://iktaworld.com/contatti', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 },
+    { url: 'https://iktaworld.com/palestre', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    { url: 'https://iktaworld.com/ikta-world', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: 'https://iktaworld.com/ikta-world/news', lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
     { url: 'https://iktaworld.com/ikta-world/organigramma', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: 'https://iktaworld.com/ikta-world/titoli', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },

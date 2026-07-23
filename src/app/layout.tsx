@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | IKTA",
   },
   description:
-    "IKTA - Intercontinental Kick Thai Boxing Association. Federazione internazionale di sport da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga, BJJ e Boxe. 50+ palestre affiliate in Italia, formazione certificata e gare ufficiali.",
+    "Federazione di sport da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga, BJJ e Boxe. Formazione certificata, gare ufficiali e titoli omologati.",
   keywords: [
     "IKTA",
     "federazione kick boxing",
