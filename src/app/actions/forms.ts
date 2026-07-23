@@ -1,13 +1,7 @@
 'use server';
 
 import { sendMail } from '@/lib/email';
-
-export type FormState = {
-  ok: boolean;
-  message: string;
-};
-
-export const initialFormState: FormState = { ok: false, message: '' };
+import type { FormState } from './form-types';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

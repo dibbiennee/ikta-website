@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import AffiliazioneForm from '@/components/AffiliazioneForm';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/affiliazione' },
@@ -88,6 +89,22 @@ export default function AffiliazionePage() {
                 <p className="text-sm text-gray-600">{benefit.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Form Affiliazione */}
+      <section className="section section-muted">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <span className="eyebrow">Inizia ora</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-3">Richiedi l&apos;affiliazione</h2>
+              <p className="text-gray-600">
+                Compila il modulo: il comitato ti ricontatta con tutte le informazioni.
+              </p>
+            </div>
+            <AffiliazioneForm />
           </div>
         </div>
       </section>
