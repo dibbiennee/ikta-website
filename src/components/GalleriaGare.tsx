@@ -29,6 +29,9 @@ const foto: GaraPhoto[] = [
   { src: '/galleria-gare/premiazione-cintura-ikta-04.jpg', alt: 'Atleta IKTA con la cintura del titolo intercontinentale', w: 1468, h: 2048 },
   { src: '/galleria-gare/evento-ikta-intervista.jpg', alt: 'Atleta IKTA intervistato sul ring durante l’evento', w: 1600, h: 1066 },
   { src: '/galleria-gare/vittoria-kickboxing-05.jpg', alt: 'Atleta IKTA vincitore acclamato sul ring', w: 2048, h: 1366 },
+  { src: '/galleria-gare/premiazione-cintura-ikta-05.jpg', alt: 'Campione IKTA premiato con la cintura del titolo insieme allo staff', w: 400, h: 400 },
+  { src: '/galleria-gare/campione-cintura-intercontinentale.jpg', alt: 'Campione IKTA con la cintura del titolo intercontinentale e la madrina di gara', w: 400, h: 400 },
+  { src: '/galleria-gare/atleti-gabbia-mma-ikta.jpg', alt: 'Atleti IKTA con la cintura del titolo davanti alla gabbia MMA', w: 604, h: 400 },
 ];
 
 export default function GalleriaGare() {

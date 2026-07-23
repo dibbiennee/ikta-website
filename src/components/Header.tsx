@@ -12,7 +12,6 @@ const navigation = [
     dropdown: [
       { name: 'Home', href: '/' },
       { name: 'Discipline', href: '/#discipline' },
-      { name: 'Affiliazione', href: '/#affiliazione' },
       { name: 'Sedi IKTA', href: '/#sedi' },
     ],
   },
@@ -37,21 +36,6 @@ const navigation = [
       { name: 'Organigramma', href: '/chi-siamo/organigramma' },
       { name: 'Il Presidente', href: '/chi-siamo#presidente' },
       { name: 'Regolamenti', href: '/chi-siamo#regolamenti' },
-      { name: 'Galleria', href: '/chi-siamo#galleria' },
-    ],
-  },
-  {
-    name: 'Discipline',
-    href: '/discipline',
-    dropdown: [
-      { name: 'Kick Boxing', href: '/discipline#kick-boxing' },
-      { name: 'Muay Thai', href: '/discipline#muay-thai' },
-      { name: 'MMA', href: '/discipline#mma' },
-      { name: 'Krav Maga', href: '/discipline#krav-maga' },
-      { name: 'Brazilian Jiu Jitsu', href: '/discipline#bjj' },
-      { name: 'Boxe', href: '/discipline#boxe' },
-      { name: 'Kung Fu Sanda', href: '/discipline#kung-fu-sanda' },
-      { name: 'Karate', href: '/discipline#karate' },
     ],
   },
   {

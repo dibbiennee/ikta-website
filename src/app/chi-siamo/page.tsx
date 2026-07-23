@@ -126,28 +126,6 @@ export default function ChiSiamoPage() {
         </div>
       </section>
 
-      {/* Galleria */}
-      <section id="galleria" className="section bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="eyebrow">Galleria</span>
-            <h2 className="mt-2">I nostri momenti</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {['/galleria1.jpg', '/galleria2.jpg', '/galleria3.jpg'].map((src, i) => (
-              <div key={src} className="rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-                <Image
-                  src={src}
-                  alt={`Galleria IKTA ${i + 1}`}
-                  width={600}
-                  height={400}
-                  className="w-full h-64 object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

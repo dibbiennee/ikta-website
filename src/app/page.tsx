@@ -143,7 +143,7 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 px-4 sm:px-0">
-              <Link href="/discipline" className="btn btn-primary">
+              <Link href="/#discipline" className="btn btn-primary">
                 Le Nostre Discipline
               </Link>
               <Link
@@ -178,7 +178,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-8 sm:mb-12">
             <span className="eyebrow mb-3">Le discipline</span>
-            <h2 className="text-center">Otto modi di combattere</h2>
+            <h2 className="text-center">Sei modi di combattere</h2>
             <p className="text-base text-gray-600 max-w-2xl text-center px-2 mt-3">
               Dall&apos;arte tradizionale allo sport moderno: regolamenti ufficiali e percorsi formativi dedicati per ogni disciplina.
             </p>
@@ -198,12 +198,6 @@ export default function Home() {
                     <p className="text-sm text-gray-600">{discipline.description}</p>
                   </div>
                 ))}
-              </div>
-
-              <div className="text-center mt-12">
-                <Link href="/discipline" className="btn btn-primary w-full sm:w-auto justify-center">
-                  Esplora tutte le discipline
-                </Link>
               </div>
             </div>
 

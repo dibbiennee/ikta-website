@@ -5,7 +5,7 @@ const footerLinks = {
   federazione: [
     { name: 'Chi Siamo', href: '/chi-siamo' },
     { name: 'Organigramma', href: '/chi-siamo/organigramma' },
-    { name: 'Discipline', href: '/discipline' },
+    { name: 'Discipline', href: '/#discipline' },
     { name: 'Regolamenti', href: '/chi-siamo#regolamenti' },
   ],
   servizi: [
