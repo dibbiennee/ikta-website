@@ -1,5 +1,14 @@
 import { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import ContactEmail from '@/components/ContactEmail';
+import ContattiForm from '@/components/ContattiForm';
+
+type ContactItem = {
+  title: string;
+  content: string;
+  icon: ReactNode;
+  isEmail?: boolean;
+};
 
 export const metadata: Metadata = {
   alternates: { canonical: '/contatti' },
@@ -7,7 +16,7 @@ export const metadata: Metadata = {
   description: 'Contatta IKTA. Sede nazionale, telefono, email e modulo di contatto per informazioni su affiliazione, formazione e gare.',
 };
 
-const contactInfo = [
+const contactInfo: ContactItem[] = [
   {
     title: 'Sede Nazionale',
     content: 'Via Ticino 15, 00053 Civitavecchia (RM)',
@@ -68,7 +77,7 @@ export default function ContattiPage() {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-sm text-gray-500">{info.title}</h3>
-                      {(info as any).isEmail ? (
+                      {info.isEmail ? (
                         <ContactEmail />
                       ) : (
                         <p className="text-gray-900 font-medium">{info.content}</p>
@@ -76,6 +85,12 @@ export default function ContattiPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Form Contatti */}
+              <div className="mb-12">
+                <h2 className="text-xl font-bold mb-6 text-left">Scrivici</h2>
+                <ContattiForm />
               </div>
 
               {/* Social */}
