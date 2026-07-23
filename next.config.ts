@@ -61,12 +61,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      // Pagina Discipline rimossa: le discipline sono ora nella home
-      { source: "/discipline", destination: "/#discipline", permanent: true },
-    ];
-  },
 };
 
 export default nextConfig;
