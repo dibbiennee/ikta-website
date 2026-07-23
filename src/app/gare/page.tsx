@@ -1,46 +1,94 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import GalleriaGare from '@/components/GalleriaGare';
 import EventGallery from '@/components/EventGallery';
-import CalendarioEventi from '@/components/CalendarioEventi';
 import RankingItalia from '@/components/RankingItalia';
 
 export const metadata: Metadata = {
   title: 'Gare',
-  description: 'Calendario gare IKTA, ranking ufficiale e omologazione titoli. Competizioni di Kick Boxing, Muay Thai, MMA e altre discipline da combattimento.',
+  description: 'Foto e locandine delle gare IKTA, prossimi eventi e ranking ufficiale. Competizioni di Kick Boxing, Free Boxing, Muay Thai e MMA con titoli in palio.',
 };
 
-const upcomingEvents = [
-  {
-    name: 'TROFEO ROMA',
-    date: 'Domenica 25 Ottobre 2026, ore 17:00 (iscrizioni ore 16:00)',
-    location: 'Palatorrino, Roma',
-    disciplines: ['Kick Boxing', 'Free Boxing'],
-  },
-  {
-    name: 'VICTORY IV',
-    date: 'Sabato 28 Novembre 2026, ore 17:00 (iscrizioni ore 16:00)',
-    location: 'Jungle Palace, Via Maratona 5, Civitavecchia',
-    disciplines: ['Kick Boxing', 'Free Boxing', 'MMA'],
-  },
-  {
-    name: 'GOLDEN WARRIOR',
-    date: 'Domenica 7 Marzo 2027, ore 10:00 (pesi ore 09:00)',
-    location: 'Palestra Giosuè Carducci, Piazzale della Gioventù 1, Santa Marinella',
-    disciplines: ['Free Boxing', 'Kick Boxing', 'MMA'],
-  },
-];
+// Dati strutturati per i motori di ricerca (eventi futuri)
+const eventsJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'SportsEvent',
+      name: 'Trofeo Roma - Kick Boxing e Free Boxing',
+      startDate: '2026-10-25T17:00:00+02:00',
+      sport: 'Kick Boxing',
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      organizer: { '@type': 'SportsOrganization', name: 'IKTA', url: 'https://iktaworld.com' },
+      location: {
+        '@type': 'Place',
+        name: 'Palatorrino',
+        address: { '@type': 'PostalAddress', addressLocality: 'Roma', addressCountry: 'IT' },
+      },
+    },
+    {
+      '@type': 'SportsEvent',
+      name: 'Victory IV - Kick Boxing, Free Boxing e MMA',
+      startDate: '2026-11-28T17:00:00+01:00',
+      sport: 'Kick Boxing',
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      organizer: { '@type': 'SportsOrganization', name: 'IKTA', url: 'https://iktaworld.com' },
+      location: {
+        '@type': 'Place',
+        name: 'Jungle Palace',
+        address: { '@type': 'PostalAddress', streetAddress: 'Via Maratona 5', addressLocality: 'Civitavecchia', addressCountry: 'IT' },
+      },
+    },
+    {
+      '@type': 'SportsEvent',
+      name: 'Golden Warrior - Free Boxing, Kick Boxing e MMA',
+      startDate: '2027-03-07T10:00:00+01:00',
+      sport: 'Kick Boxing',
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      organizer: { '@type': 'SportsOrganization', name: 'IKTA', url: 'https://iktaworld.com' },
+      location: {
+        '@type': 'Place',
+        name: 'Palestra Giosuè Carducci',
+        address: { '@type': 'PostalAddress', streetAddress: 'Piazzale della Gioventù 1', addressLocality: 'Santa Marinella', addressCountry: 'IT' },
+      },
+    },
+  ],
+};
 
 export default function GarePage() {
   return (
     <>
-      {/* GALLERIA EVENTI */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
+      />
+
+      {/* GALLERIA FOTO ATLETI / GARE */}
       <section className="section pt-28 md:pt-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="eyebrow">Galleria</span>
             <h1 className="mt-2">Eventi e gare</h1>
             <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-              Le locandine dei nostri eventi di Kick Boxing, Muay Thai e altre discipline da combattimento.
+              I nostri atleti in gara: vittorie, premiazioni e titoli conquistati sul ring negli eventi IKTA.
+            </p>
+          </div>
+
+          <GalleriaGare />
+        </div>
+      </section>
+
+      {/* LOCANDINE EVENTI (prossimi + passati) */}
+      <section className="section bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Locandine</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-2">Eventi in programma e passati</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
+              Le locandine ufficiali dei prossimi appuntamenti IKTA e degli eventi già svolti.
             </p>
           </div>
 
@@ -48,67 +96,8 @@ export default function GarePage() {
         </div>
       </section>
 
-      {/* 1. CALENDARIO GARE */}
-      <section id="calendario" className="section">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Eventi</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">Calendario Gare</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-              Calendario delle competizioni IKTA in programma. Contattaci per iscrivere i tuoi atleti.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {upcomingEvents.map((event) => (
-              <div key={event.name} className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow border border-gray-100 p-8">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3">{event.name}</h3>
-                <p className="text-[#1e40af] font-medium mb-4 flex items-center gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
-                  </svg>
-                  {event.date}
-                </p>
-                <p className="text-gray-600 mb-5 flex items-start gap-2">
-                  <svg className="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                  </svg>
-                  {event.location}
-                </p>
-
-                <div className="pt-4 border-t border-gray-200">
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {event.disciplines.map((discipline) => (
-                      <span key={discipline} className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium">
-                        {discipline}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* CALENDARIO EVENTI ANNUALI */}
-      <section className="section bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Programmazione</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2">Calendario Eventi Annuali</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mt-4">
-              La programmazione completa degli eventi IKTA durante l&apos;anno.
-            </p>
-          </div>
-          <CalendarioEventi />
-        </div>
-      </section>
-
-      {/* 2. RANKING IKTA ITALIA */}
-      <section id="ranking" className="section bg-gray-50">
+      {/* RANKING IKTA ITALIA */}
+      <section id="ranking" className="section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-sm font-semibold text-[#1e40af] tracking-wider uppercase">Classifiche</span>
