@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import ContactEmail from '@/components/ContactEmail';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/contatti' },
   title: 'Contatti',
   description: 'Contatta IKTA. Sede nazionale, telefono, email e modulo di contatto per informazioni su affiliazione, formazione e gare.',
 };

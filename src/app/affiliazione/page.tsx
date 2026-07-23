@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/affiliazione' },
   title: 'Affiliazione',
   description: 'Affiliati alla federazione IKTA Italia: accedi a formazione certificata, gare ufficiali, ranking e supporto tecnico per la tua palestra.',
 };

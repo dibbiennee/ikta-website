@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ikta-world/cinture-krav-maga' },
   title: 'Cinture Krav Maga - IKTA World',
   description: 'Cinture Krav Maga IKTA World.',
 };

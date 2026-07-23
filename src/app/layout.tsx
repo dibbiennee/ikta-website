@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/' },
   metadataBase: new URL("https://iktaworld.com"),
   title: {
     default: "IKTA Italia | Federazione Kick Boxing, Muay Thai, MMA e Krav Maga",

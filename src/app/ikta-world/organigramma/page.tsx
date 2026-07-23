@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ikta-world/organigramma' },
   title: 'Organigramma - IKTA World',
   description: 'Organigramma IKTA World.',
 };

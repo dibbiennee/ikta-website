@@ -5,6 +5,7 @@ import HeroCarousel from '@/components/HeroCarousel';
 import SedeCard from '@/components/SedeCard';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/' },
   title: 'IKTA Italia | Federazione Kick Boxing, Muay Thai, MMA e Krav Maga',
   description: 'IKTA - Intercontinental Kick Thai Boxing Association. Federazione internazionale di sport da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga, BJJ e Boxe. 50+ palestre affiliate, formazione certificata e gare ufficiali.',
   keywords: ['IKTA', 'kick boxing', 'muay thai', 'MMA', 'krav maga', 'BJJ', 'arti marziali', 'federazione', 'Italia'],

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import SedeCard from '@/components/SedeCard';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/palestre' },
   title: 'Palestre IKTA',
   description: 'Trova le palestre IKTA Gym affiliate. Sedi ufficiali per Kick Boxing, Muay Thai e altre discipline.',
 };

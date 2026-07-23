@@ -4,6 +4,7 @@ import CorsiAccordion from '@/components/CorsiAccordion';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/formazione' },
   title: 'Formazione',
   description: 'Corsi IKTA per allenatori, istruttori e maestri di Kick Boxing, Muay Thai e MMA. Formazione certificata con rilascio qualifica federale.',
 };
