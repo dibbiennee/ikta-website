@@ -132,15 +132,14 @@ export default function Home() {
         {/* Content Container */}
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-16 pt-[clamp(5rem,12vh,12rem)]">
           <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center gap-5 md:gap-7">
-            <span className="eyebrow !text-[#eab308]">Federazione Internazionale · dal 2012</span>
+            <span className="eyebrow !text-[#eab308]">Federazione Internazionale</span>
 
-            <h1 className="!text-white drop-shadow-2xl max-w-3xl">
-              Sport da combattimento, fatti sul serio.
+            <h1 className="!text-white drop-shadow-2xl max-w-2xl !tracking-normal !font-semibold !text-[1.75rem] sm:!text-4xl md:!text-[2.75rem] !leading-[1.15]">
+              Kick Boxing, Muay Thai, MMA, Krav Maga e altre discipline.
+              <span className="block mt-3 sm:mt-4 !font-normal text-gray-200 !text-lg sm:!text-xl md:!text-2xl drop-shadow-md">
+                Gare ufficiali e titoli.
+              </span>
             </h1>
-
-            <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed text-center drop-shadow-md px-4">
-              Kick Boxing, Muay Thai, MMA, Krav Maga e altre discipline. Formazione certificata, gare ufficiali e titoli omologati.
-            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 px-4 sm:px-0">
