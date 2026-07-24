@@ -1,6 +1,16 @@
 'use client';
 
-const belts = [
+type Belt = {
+  id: string;
+  label: string;
+  color: string;
+  textColor?: string;
+  gold?: boolean;
+  border?: string;
+  members: { name: string; date: string }[];
+};
+
+const belts: Belt[] = [
   {
     id: 'bianca',
     label: 'Cintura Bianca',
@@ -678,7 +688,7 @@ export default function CintureKickBoxePage() {
             {/* Belt Header */}
             <div style={{
               background: belt.color,
-              color: (belt as any).gold ? '#eab308' : (belt as any).textColor || 'white',
+              color: belt.gold ? '#eab308' : belt.textColor || 'white',
               borderRadius: '16px',
               padding: '20px 28px',
               marginBottom: '20px',
@@ -686,7 +696,7 @@ export default function CintureKickBoxePage() {
               justifyContent: 'space-between',
               alignItems: 'center',
               boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-              border: (belt as any).border || 'none',
+              border: belt.border || 'none',
             }}>
               <h3 style={{ fontSize: '20px', fontWeight: 700 }}>{belt.label}</h3>
               <span style={{ fontSize: '14px', fontWeight: 600, opacity: 0.8 }}>

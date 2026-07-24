@@ -22,6 +22,7 @@ export default async function Image() {
           background: 'white',
         }}
       >
+        {/* eslint-disable-next-line jsx-a11y/alt-text -- satori/OG image, alt non applicabile */}
         <img
           src={logoBase64}
           width={400}

@@ -9,6 +9,8 @@ export default function ContactEmail() {
     // Costruisci l'email lato client per evitare scraping da bot
     const user = 'massimo.brizi';
     const domain = 'tiscali.it';
+    // Intenzionale: assemblaggio client-only anti-scraping (non deve finire nell'HTML SSR)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setEmail(`${user}@${domain}`);
   }, []);
 

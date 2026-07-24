@@ -11,7 +11,17 @@ const istruttori = [
   { name: 'Igor Bastioni', date: '14/3/2021' },
 ];
 
-const belts = [
+type Belt = {
+  id: string;
+  label: string;
+  color: string;
+  textColor?: string;
+  gold?: boolean;
+  border?: string;
+  members: { name: string; date: string }[];
+};
+
+const belts: Belt[] = [
   {
     id: 'bianca',
     label: 'Cintura Bianca',
@@ -258,7 +268,7 @@ export default function CintureKravMagaPage() {
             {/* Belt Header */}
             <div style={{
               background: belt.color,
-              color: (belt as any).textColor || 'white',
+              color: belt.textColor || 'white',
               borderRadius: '16px',
               padding: '20px 28px',
               marginBottom: '20px',

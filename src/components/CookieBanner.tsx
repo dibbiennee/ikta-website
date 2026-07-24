@@ -11,9 +11,11 @@ export default function CookieBanner() {
   const [consent, setConsent] = useState<Consent | undefined>(undefined);
 
   useEffect(() => {
+    // Lettura client-only di localStorage (SSR-safe): i setState qui sono intenzionali.
     try {
       const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored === 'all' || stored === 'necessary') {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setConsent(stored);
       } else {
         setConsent(null);
