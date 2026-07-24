@@ -126,20 +126,20 @@ export default function Home() {
         {/* Background Carousel */}
         <HeroCarousel />
 
-        {/* Dark gradient overlay per leggibilita testo sopra immagine */}
-        <div className="absolute inset-0 z-[5] bg-gradient-to-b from-black/30 via-black/40 to-black/70 pointer-events-none" />
+        {/* Gradient overlay navy (brand) per leggibilita testo, senza spegnere le foto */}
+        <div className="absolute inset-0 z-[5] bg-gradient-to-b from-[#0B2340]/45 via-[#0B2340]/55 to-[#0B2340]/85 pointer-events-none" />
 
         {/* Content Container */}
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-16 pt-[clamp(5rem,12vh,12rem)]">
           <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center gap-5 md:gap-7">
-            <span className="eyebrow !text-white/80">Federazione internazionale</span>
+            <span className="eyebrow !text-[#eab308]">Federazione Internazionale · dal 2012</span>
 
-            <h1 className="!text-white drop-shadow-2xl">
-              Intercontinental Kick Thai Boxing Association
+            <h1 className="!text-white drop-shadow-2xl max-w-3xl">
+              Sport da combattimento, fatti sul serio.
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed text-center drop-shadow-md px-4">
-              Kick Boxing, Thai Boxe e altre discipline. Formazione certificata, gare ufficiali, ranking e titoli omologati.
+              Kick Boxing, Muay Thai, MMA, Krav Maga e altre discipline. Formazione certificata, gare ufficiali e titoli omologati.
             </p>
 
             {/* CTA Buttons */}

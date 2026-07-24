@@ -4,20 +4,22 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const heroImages = [
-  { src: '/hero/homescorre2.jpg', objectPosition: 'center top', fit: 'cover' as const },
-  { src: '/hero/homescorre3.jpg', objectPosition: 'center center', fit: 'cover' as const },
-  { src: '/hero/cinturagiallaikta.jpg', objectPosition: 'center center', fit: 'contain' as const },
-  { src: '/hero/hero2.jpg', objectPosition: 'center center', fit: 'cover' as const },
-  { src: '/hero/fotohomeikta11.jpg', objectPosition: 'center center', fit: 'cover' as const },
-  { src: '/hero/hero3.jpg', objectPosition: 'center center', fit: 'cover' as const },
-  { src: '/hero/hero4.jpg', objectPosition: 'center center', fit: 'cover' as const },
-  { src: '/hero/hero5.jpg', objectPosition: 'center center', fit: 'cover' as const },
+  { src: '/hero/fotohomeikta11.jpg', alt: 'Incontro di kickboxing IKTA sul ring con l’arbitro' },
+  { src: '/galleria-gare/campione-cintura-intercontinentale.jpg', alt: 'Campione IKTA con la cintura del titolo intercontinentale' },
+  { src: '/galleria-gare/vincitori-ring-ikta.jpg', alt: 'Atleta IKTA vincitore con il braccio alzato sul ring' },
+  { src: '/galleria-gare/premiazione-cintura-ikta-01.jpg', alt: 'Due campioni IKTA con le cinture del titolo dopo il match' },
+  { src: '/galleria-gare/vittoria-kickboxing-03.jpg', alt: 'Vittoria di kickboxing IKTA sul ring al tramonto' },
+  { src: '/galleria-gare/podio-titoli-ikta.jpg', alt: 'Podio di premiazione IKTA con atleti, trofei e bandiere' },
 ];
 
 export default function HeroCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    // Rispetta prefers-reduced-motion: niente autoplay se l'utente lo ha richiesto
+    const mq = typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
+    if (mq && mq.matches) return;
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % heroImages.length);
     }, 5000);
@@ -32,17 +34,14 @@ export default function HeroCarousel() {
         <div
           key={image.src}
           className="absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out"
-          style={{
-            opacity: index === currentIndex ? 1 : 0,
-            backgroundColor: image.fit === 'contain' ? '#000' : 'transparent',
-          }}
+          style={{ opacity: index === currentIndex ? 1 : 0 }}
         >
           <Image
             src={image.src}
-            alt={`IKTA Hero ${index + 1}`}
+            alt={image.alt}
             fill
-            className={image.fit === 'contain' ? 'object-contain' : 'object-cover'}
-            style={{ objectPosition: image.objectPosition }}
+            className="object-cover"
+            style={{ objectPosition: 'center' }}
             priority={index === 0}
             loading={index === 0 ? 'eager' : 'lazy'}
             sizes="100vw"
@@ -51,21 +50,16 @@ export default function HeroCarousel() {
         </div>
       ))}
 
-      {/* White transparent overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
-
       {/* Navigation dots */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex
-                ? 'bg-white w-6'
-                : 'bg-white/50 hover:bg-white/75'
+            className={`h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex ? 'bg-[#eab308] w-6' : 'bg-white/50 hover:bg-white/75 w-2'
             }`}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`Vai alla slide ${index + 1}`}
           />
         ))}
       </div>
