@@ -66,9 +66,47 @@ const benefits = [
 ];
 
 
+const faqs: { q: string; a: string }[] = [
+  {
+    q: 'Come funziona l’affiliazione?',
+    a: 'Compili il modulo con i dati della palestra. Il comitato ti ricontatta con la procedura, la documentazione richiesta e i passi successivi.',
+  },
+  {
+    q: 'Cosa include l’affiliazione?',
+    a: 'Riconoscimento ufficiale come sede IKTA, formazione certificata per i tuoi istruttori a tariffe agevolate, partecipazione a gare e campionati, copertura assicurativa per gli atleti tesserati, visibilità sul sito e sui canali social e supporto tecnico continuo.',
+  },
+  {
+    q: 'Gli atleti sono coperti da assicurazione?',
+    a: 'Sì, tutti gli atleti tesserati IKTA hanno copertura assicurativa.',
+  },
+  {
+    q: 'Posso far certificare i miei istruttori?',
+    a: 'Sì. Gli affiliati accedono ai corsi di formazione IKTA (allenatore, istruttore, maestro) a tariffe agevolate, con diploma riconosciuto e iscrizione all’albo federale.',
+  },
+  {
+    q: 'Quanto costa affiliarsi?',
+    a: 'Le quote dipendono dalla tipologia di palestra e dai servizi scelti. Contattaci dal modulo o su WhatsApp: ti inviamo il dettaglio aggiornato.',
+  },
+];
+
 export default function AffiliazionePage() {
   return (
     <>
+      {/* JSON-LD FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
+          }),
+        }}
+      />
       {/* Benefits */}
       <section className="section" style={{ marginTop: '100px' }}>
         <div className="container mx-auto px-4">
@@ -105,6 +143,29 @@ export default function AffiliazionePage() {
               </p>
             </div>
             <AffiliazioneForm />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <span className="eyebrow">Domande frequenti</span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2">Affiliazione: le risposte</h2>
+            </div>
+            <div className="flex flex-col gap-3">
+              {faqs.map((f) => (
+                <details key={f.q} className="card !p-0 overflow-hidden group">
+                  <summary className="cursor-pointer list-none px-5 py-4 font-semibold text-gray-900 flex items-center justify-between gap-4">
+                    <span>{f.q}</span>
+                    <span className="text-[#1e40af] text-xl leading-none transition-transform group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="px-5 pb-5 text-sm text-gray-600">{f.a}</p>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>
