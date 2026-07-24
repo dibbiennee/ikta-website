@@ -1,78 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { disciplines } from '@/data/discipline';
 
 export const metadata: Metadata = {
   title: 'Discipline da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga',
   description: 'Le discipline IKTA: Kick Boxing, Muay Thai, MMA, Krav Maga, Brazilian Jiu Jitsu, Boxe, Kung Fu Sanda e Karate. Regolamenti ufficiali e percorsi formativi dedicati.',
   alternates: { canonical: '/discipline' },
 };
-
-const disciplines = [
-  {
-    id: 'kick-boxing',
-    name: 'Kick Boxing',
-    category: 'Ring Sports',
-    description: 'Sport da combattimento che combina tecniche di pugno derivate dalla boxe occidentale con calci delle arti marziali orientali.',
-    features: ['Tecniche di pugno: jab, cross, hook, uppercut', 'Tecniche di calcio: front kick, roundhouse, side kick', 'Combinazioni e footwork'],
-    levels: ['Light', 'KO', 'Professional'],
-  },
-  {
-    id: 'muay-thai',
-    name: 'Muay Thai',
-    category: 'Ring Sports',
-    description: 'Arte marziale thailandese conosciuta come "l\'arte delle otto armi" per l\'utilizzo di pugni, calci, gomiti e ginocchia.',
-    features: ['Pugni e calci tradizionali', 'Tecniche di gomito (sok)', 'Tecniche di ginocchio (kao)', 'Clinch e tecniche in presa'],
-    levels: ['Light', 'KO', 'Professional'],
-  },
-  {
-    id: 'mma',
-    name: 'MMA',
-    category: 'Ring Sports',
-    description: 'Le arti marziali miste combinano tecniche di striking e grappling. Disciplina completa che integra pugni, calci, lotta e sottomissioni.',
-    features: ['Striking in piedi', 'Takedown e lotta', 'Ground and pound', 'Sottomissioni'],
-    levels: ['Light', 'KO', 'Professional'],
-  },
-  {
-    id: 'krav-maga',
-    name: 'Krav Maga',
-    category: 'Difesa Personale',
-    description: 'Sistema di autodifesa israeliano sviluppato per situazioni reali. Enfatizza risposte istintive e tecniche efficaci sotto stress.',
-    features: ['Difesa istintiva', 'Risposte sotto stress', 'Difesa da armi', 'Scenari realistici'],
-    levels: [],
-  },
-  {
-    id: 'bjj',
-    name: 'Brazilian Jiu Jitsu',
-    category: 'Grappling',
-    description: 'Arte marziale brasiliana focalizzata sulla lotta a terra. L\'obiettivo è portare l\'avversario al suolo e sottometterlo.',
-    features: ['Takedown e proiezioni', 'Controllo a terra', 'Sottomissioni (leve, strangolamenti)', 'Escape e transizioni'],
-    levels: ['Light', 'KO', 'Professional'],
-  },
-  {
-    id: 'boxe',
-    name: 'Boxe',
-    category: 'Ring Sports',
-    description: 'Il pugilato classico, la nobile arte. Sport da combattimento che utilizza esclusivamente tecniche di pugno, difesa e movimento.',
-    features: ['Tecniche di pugno fondamentali', 'Footwork e spostamenti', 'Guardia e parate', 'Schivate e contrattacchi'],
-    levels: ['Light', 'KO', 'Professional'],
-  },
-  {
-    id: 'kung-fu-sanda',
-    name: 'Kung Fu Sanda',
-    category: 'Ring Sports',
-    description: 'La versione sportiva del Kung Fu cinese. Combina tecniche di calcio, pugno e proiezioni (shuai jiao).',
-    features: ['Tecniche di pugno e calcio', 'Proiezioni e spazzate', 'Combattimento su pedana', 'Sistema a punti'],
-    levels: ['Light', 'KO', 'Professional'],
-  },
-  {
-    id: 'karate',
-    name: 'Karate',
-    category: 'Arti Marziali Tradizionali',
-    description: 'Arte marziale giapponese che utilizza tecniche di pugno, calcio e percussione. Enfatizza disciplina e perfezionamento tecnico.',
-    features: ['Kata (forme)', 'Kumite (combattimento)', 'Kihon (fondamentali)', 'Bunkai (applicazioni)'],
-    levels: ['Light', 'KO', 'Professional'],
-  },
-];
 
 export default function DisciplinePage() {
   return (
