@@ -9,7 +9,6 @@ const heroImages = [
   { src: '/galleria-gare/vincitori-ring-ikta.jpg', alt: 'Atleta IKTA vincitore con il braccio alzato sul ring' },
   { src: '/galleria-gare/premiazione-cintura-ikta-01.jpg', alt: 'Due campioni IKTA con le cinture del titolo dopo il match' },
   { src: '/galleria-gare/vittoria-kickboxing-03.jpg', alt: 'Vittoria di kickboxing IKTA sul ring al tramonto' },
-  { src: '/galleria-gare/podio-titoli-ikta.jpg', alt: 'Podio di premiazione IKTA con atleti, trofei e bandiere' },
 ];
 
 export default function HeroCarousel() {
