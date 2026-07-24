@@ -4,6 +4,7 @@ import Image from 'next/image';
 import HeroCarousel from '@/components/HeroCarousel';
 import SedeCard from '@/components/SedeCard';
 import { sedi, sediJsonLd } from '@/data/sedi';
+import { disciplines, stats } from '@/data/home';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
@@ -27,40 +28,6 @@ export const metadata: Metadata = {
 
 const BRAND_BLUE = '#1e40af';
 const BRAND_BLUE_HOVER = '#1e3a8a';
-
-const disciplines = [
-  {
-    name: 'Kick Boxing',
-    description: 'Pugni e calci. Tecnica di boxe occidentale unita ad arti marziali orientali.',
-  },
-  {
-    name: 'Muay Thai',
-    description: 'L\'arte delle otto armi: pugni, calci, gomiti e ginocchia.',
-  },
-  {
-    name: 'MMA',
-    description: 'Striking e grappling in una sola disciplina. Versatilita totale.',
-  },
-  {
-    name: 'Krav Maga',
-    description: 'Difesa personale israeliana. Pragmatica, diretta, efficace.',
-  },
-  {
-    name: 'Boxe',
-    description: 'Pugilato classico. Solo pugni, footwork e timing.',
-  },
-  {
-    name: 'Brazilian Jiu Jitsu',
-    description: 'Lotta a terra, leve e sottomissioni. Tecnica sopra la forza.',
-  },
-];
-
-const stats = [
-  { value: '22', label: 'Titoli Mondiali' },
-  { value: '50+', label: 'Palestre Affiliate' },
-  { value: '1000+', label: 'Atleti Tesserati' },
-  { value: '8', label: 'Discipline' },
-];
 
 export default function Home() {
   return (
