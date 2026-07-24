@@ -174,6 +174,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Percorsi per pubblico */}
+      <section className="section section-muted">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center mb-8 sm:mb-12">
+            <span className="eyebrow mb-3">Da dove vuoi iniziare</span>
+            <h2 className="text-center">Il tuo percorso in IKTA</h2>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <div className="card flex flex-col">
+              <h3 className="!text-xl mb-2">Gestisci una palestra?</h3>
+              <p className="text-sm text-gray-600 flex-1">
+                Entra nella rete IKTA: formazione certificata, gare ufficiali, assicurazione atleti e visibilità.
+              </p>
+              <Link href="/affiliazione" className="btn btn-primary mt-4 self-start">
+                Affilia la tua palestra
+              </Link>
+            </div>
+            <div className="card flex flex-col">
+              <h3 className="!text-xl mb-2">Vuoi allenarti?</h3>
+              <p className="text-sm text-gray-600 flex-1">
+                Trova la palestra IKTA più vicina e allenati con istruttori certificati.
+              </p>
+              <Link href="/palestre" className="btn btn-secondary mt-4 self-start">
+                Trova la sede
+              </Link>
+            </div>
+            <div className="card flex flex-col">
+              <h3 className="!text-xl mb-2">Vuoi insegnare?</h3>
+              <p className="text-sm text-gray-600 flex-1">
+                Diventa istruttore, allenatore o maestro con i corsi di formazione IKTA.
+              </p>
+              <Link href="/formazione" className="btn btn-secondary mt-4 self-start">
+                Scopri i corsi
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Disciplines Section */}
       <section id="discipline" className="section">
         <div className="container mx-auto px-4">
