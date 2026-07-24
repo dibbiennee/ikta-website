@@ -144,7 +144,7 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 px-4 sm:px-0">
-              <Link href="/#discipline" className="btn btn-primary">
+              <Link href="/discipline" className="btn btn-primary">
                 Le Nostre Discipline
               </Link>
               <Link

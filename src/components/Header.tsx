@@ -3,15 +3,18 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect, useCallback } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
-const navigation = [
+type NavSub = { name: string; href: string; row?: string };
+type NavItem = { name: string; href: string; dropdown?: NavSub[] };
+
+const navigation: NavItem[] = [
   {
     name: 'IKTA Italia',
     href: '/',
     dropdown: [
       { name: 'Home', href: '/' },
-      { name: 'Discipline', href: '/#discipline' },
+      { name: 'Discipline', href: '/discipline' },
       { name: 'Sedi IKTA', href: '/#sedi' },
     ],
   },
@@ -53,7 +56,6 @@ const navigation = [
     dropdown: [
       { name: 'Calendario Gare', href: '/gare#calendario' },
       { name: 'Ranking IKTA', href: '/gare#ranking' },
-      { name: 'Omologazioni Titoli', href: '/gare#omologazioni' },
     ],
   },
   {
@@ -66,7 +68,6 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpenSubmenu, setMobileOpenSubmenu] = useState<string | null>(null);
-  const router = useRouter();
   const pathname = usePathname();
 
   // Handle scroll to anchor
@@ -160,7 +161,7 @@ export default function Header() {
                           {(() => {
                             const groups: { key: string; items: typeof item.dropdown }[] = [];
                             item.dropdown.forEach((subItem) => {
-                              const r = (subItem as any).row;
+                              const r = subItem.row;
                               if (r && groups.length > 0 && groups[groups.length - 1].key === r) {
                                 groups[groups.length - 1].items.push(subItem);
                               } else {
@@ -316,7 +317,7 @@ export default function Header() {
                             {(() => {
                               const groups: { key: string; items: NonNullable<typeof item.dropdown> }[] = [];
                               item.dropdown?.forEach((subItem) => {
-                                const r = (subItem as any).row;
+                                const r = subItem.row;
                                 if (r && groups.length > 0 && groups[groups.length - 1].key === r) {
                                   groups[groups.length - 1].items.push(subItem);
                                 } else {
@@ -378,8 +379,16 @@ export default function Header() {
             </div>
           </div>
 
-          {/* CTA Button at Bottom */}
-          <div style={{ margin: '0.75rem 0.5rem 0 0.5rem' }}>
+          {/* CTA Buttons at Bottom */}
+          <div className="flex flex-col gap-2" style={{ margin: '0.75rem 0.5rem 0 0.5rem' }}>
+            <Link
+              href="/affiliazione"
+              className="flex items-center justify-center w-full py-3 bg-[#eab308] text-gray-900 font-bold rounded-xl shadow-lg hover:bg-[#ca8a04] transition-all active:scale-[0.98]"
+              style={{ fontSize: 'clamp(0.95rem, 3.5vw, 1.1rem)' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Affiliati Ora
+            </Link>
             <a
               href="https://www.instagram.com/iktaitalia?igsh=MWhxb3A1b2QxMHc2OQ%3D%3D&utm_source=qr"
               target="_blank"
