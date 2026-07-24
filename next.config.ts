@@ -50,6 +50,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  images: {
+    qualities: [75, 80],
+  },
   turbopack: {
     root: path.resolve(__dirname),
   },
