@@ -4,11 +4,10 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const heroImages = [
-  { src: '/hero/fotohomeikta11.jpg', alt: 'Incontro di kickboxing IKTA sul ring con l’arbitro' },
-  { src: '/galleria-gare/campione-cintura-intercontinentale.jpg', alt: 'Campione IKTA con la cintura del titolo intercontinentale' },
-  { src: '/galleria-gare/vincitori-ring-ikta.jpg', alt: 'Atleta IKTA vincitore con il braccio alzato sul ring' },
-  { src: '/galleria-gare/premiazione-cintura-ikta-01.jpg', alt: 'Due campioni IKTA con le cinture del titolo dopo il match' },
-  { src: '/galleria-gare/vittoria-kickboxing-03.jpg', alt: 'Vittoria di kickboxing IKTA sul ring al tramonto' },
+  { src: '/hero/hf-azione.jpg', alt: 'Incontro di kickboxing IKTA sul ring, colpo in azione' },
+  { src: '/hero/hf-campione-cintura.jpg', alt: 'Campione IKTA in piedi sul ring con la cintura del titolo' },
+  { src: '/hero/hf-vittoria.jpg', alt: 'Atleta IKTA vincitore con il braccio alzato dall’arbitro' },
+  { src: '/hero/hf-due-campioni.jpg', alt: 'Due campioni IKTA con le cinture del titolo' },
 ];
 
 export default function HeroCarousel() {
