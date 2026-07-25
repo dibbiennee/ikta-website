@@ -130,18 +130,14 @@ export default function CintureKravMagaPage() {
 
             {/* Members */}
             {belt.members.length > 0 ? (
-              <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid #e5e7eb' }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {belt.members.map((m, i) => (
-                  <div key={`${m.name}-${m.date}-${i}`} style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    padding: '10px 20px',
-                    backgroundColor: i % 2 === 0 ? '#fff' : '#f9fafb',
-                    borderBottom: i < belt.members.length - 1 ? '1px solid #f3f4f6' : 'none',
-                  }}>
-                    <span style={{ fontSize: '14px', fontWeight: 500, color: '#111827' }}>{m.name}</span>
-                    <span style={{ fontSize: '12px', color: '#6b7280', whiteSpace: 'nowrap', marginLeft: '16px' }}>{m.date}</span>
+                  <div
+                    key={`${m.name}-${m.date}-${i}`}
+                    className="flex items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-2.5"
+                  >
+                    <span className="text-sm font-medium text-gray-900">{m.name}</span>
+                    <span className="ml-4 whitespace-nowrap text-xs text-gray-500">{m.date}</span>
                   </div>
                 ))}
               </div>

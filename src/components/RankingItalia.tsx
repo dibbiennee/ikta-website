@@ -9,38 +9,19 @@ import {
 
 function RankingTable({ weights, gender }: { weights: WeightClass[]; gender: string }) {
   return (
-    <div style={{ marginBottom: '24px' }}>
-      <h5 style={{
-        fontSize: '13px',
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        letterSpacing: '1.5px',
-        color: gender === 'Men' ? '#1e40af' : '#be185d',
-        marginBottom: '12px',
-      }}>
-        {gender}
-      </h5>
-      <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid #e5e7eb' }}>
-        {weights.map((w, i) => (
-          <div key={w.kg} style={{
-            display: 'flex',
-            alignItems: 'center',
-            padding: '12px 20px',
-            backgroundColor: i % 2 === 0 ? '#fff' : '#f9fafb',
-            borderBottom: i < weights.length - 1 ? '1px solid #f3f4f6' : 'none',
-          }}>
-            <span style={{
-              fontSize: '13px',
-              fontWeight: 700,
-              color: '#374151',
-              minWidth: '70px',
-            }}>
-              KG {w.kg}
-            </span>
+    <div className="mb-5">
+      <h5 className="text-xs font-bold uppercase tracking-wider text-[#1e40af] mb-2">{gender}</h5>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        {weights.map((w) => (
+          <div
+            key={w.kg}
+            className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white px-4 py-2.5"
+          >
+            <span className="w-14 shrink-0 text-xs font-bold text-gray-500">KG {w.kg}</span>
             {w.champion ? (
-              <span style={{ fontSize: '14px', fontWeight: 600, color: '#111827' }}>{w.champion}</span>
+              <span className="flex-1 min-w-0 truncate text-sm font-semibold text-gray-900">{w.champion}</span>
             ) : (
-              <span style={{ fontSize: '13px', color: '#d1d5db' }}>—</span>
+              <span className="text-sm text-gray-300">—</span>
             )}
           </div>
         ))}
