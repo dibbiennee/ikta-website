@@ -69,18 +69,21 @@ export default function ContattiPage() {
             <div className="text-center">
               <h1 className="text-2xl font-bold mb-8">Informazioni di Contatto</h1>
 
-              <div className="space-y-5 mb-12">
+              <div className="grid gap-4 sm:grid-cols-2 mb-12 text-left">
                 {contactInfo.map((info) => (
-                  <div key={info.title} className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 text-gray-700">
+                  <div
+                    key={info.title}
+                    className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white p-4 !text-left"
+                  >
+                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 text-[#1e40af]">
                       {info.icon}
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-sm text-gray-500">{info.title}</h3>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="!text-left font-semibold text-xs uppercase tracking-wide text-gray-500 mb-0.5">{info.title}</h3>
                       {info.isEmail ? (
                         <ContactEmail />
                       ) : (
-                        <p className="text-gray-900 font-medium">{info.content}</p>
+                        <p className="!text-left text-gray-900 font-medium break-words">{info.content}</p>
                       )}
                     </div>
                   </div>
