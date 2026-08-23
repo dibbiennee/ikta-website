@@ -551,6 +551,8 @@ const belts = [
       { name: 'Thiago Luiz Luk', date: '16/01/2021' },
       { name: 'Denis De Souza', date: '16/01/2021' },
       { name: 'Danilo Lopes', date: '7/9/2024' },
+      { name: 'Christiano Naoto Irie', date: '8/8/2026' },
+      { name: 'Wallace Candido Da Silva', date: '8/8/2026' },
     ],
   },
   {
@@ -572,6 +574,7 @@ const belts = [
       { name: 'Laecio Nunes', date: '1/12/2013' },
       { name: 'Gilmar De Andrade', date: '29/7/2020' },
       { name: 'Genivaldo Porto', date: '16/01/2021' },
+      { name: 'Walter Silva', date: '8/8/2026' },
     ],
   },
   {
