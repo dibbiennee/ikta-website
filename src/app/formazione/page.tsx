@@ -204,9 +204,12 @@ export default function FormazionePage() {
               {graduazioni.map((g) => (
                 <div
                   key={g.nome}
-                  className="flex items-center justify-between border border-gray-200 bg-white px-4 py-3"
+                  className="flex items-center justify-between gap-3 border border-gray-200 bg-white px-4 py-3"
                 >
-                  <span className="font-semibold text-gray-900">{g.nome}</span>
+                  <div className="min-w-0">
+                    <span className="block font-semibold text-gray-900 truncate">{g.nome}</span>
+                    <span className="text-xs text-gray-500">{g.data}</span>
+                  </div>
                   <span className="text-sm font-semibold text-[#1e40af] whitespace-nowrap">{g.da} → {g.a}</span>
                 </div>
               ))}
