@@ -3,6 +3,7 @@ import Link from 'next/link';
 import CorsiAccordion from '@/components/CorsiAccordion';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { alboAllenatori, alboIstruttori, alboMaestri, alboUfficiali } from '@/data/albo';
+import { graduazioni } from '@/data/graduazioni';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/formazione' },
@@ -188,6 +189,32 @@ export default function FormazionePage() {
       </section>
 
       {/* 4. COME FUNZIONA */}
+      {/* Graduazioni Dan */}
+      <section id="graduazioni" className="section bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <span className="eyebrow">Passaggi di grado</span>
+              <h2 className="mt-2">Graduazioni Dan</h2>
+              <p className="text-gray-600 mt-3">
+                Ultimi passaggi di grado Dan ufficializzati dalla federazione.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {graduazioni.map((g) => (
+                <div
+                  key={g.nome}
+                  className="flex items-center justify-between border border-gray-200 bg-white px-4 py-3"
+                >
+                  <span className="font-semibold text-gray-900">{g.nome}</span>
+                  <span className="text-sm font-semibold text-[#1e40af] whitespace-nowrap">{g.da} → {g.a}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="calendario" className="section bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
