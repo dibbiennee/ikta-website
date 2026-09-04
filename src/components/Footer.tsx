@@ -135,6 +135,19 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Enti di riferimento */}
+        <div className="mt-8 pt-6 border-t border-gray-800 flex flex-wrap items-center justify-center gap-3">
+          <div className="bg-white rounded-lg px-4 h-14 flex items-center">
+            <Image src="/loghi-enti/logoconi.png" alt="CONI" width={160} height={127} className="h-9 w-auto object-contain" />
+          </div>
+          <div className="bg-white rounded-lg px-4 h-14 flex items-center">
+            <Image src="/loghi-enti/logolibertas.png" alt="Centro Nazionale Sportivo Libertas" width={200} height={120} className="h-9 w-auto object-contain" />
+          </div>
+          <div className="bg-white rounded-lg px-4 h-14 flex items-center">
+            <Image src="/loghi-enti/logoministro.png" alt="Ministero dell'Interno" width={220} height={68} className="h-6 w-auto object-contain" />
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="mt-8 pt-6 border-t border-gray-800">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
