@@ -2,21 +2,11 @@
 
 export const countries = [
   {
-    name: 'USA',
-    logo: '/loghi-world/logoamerica1.jpeg',
+    name: 'Argentina',
+    logo: '/loghi-world/logoargentina1.jpg',
     members: [
-      { name: 'Kyle Murray', location: 'San Diego, California', sector: 'Kick Boxing' },
-      { name: 'Ron Murray', location: 'Orange County, California', sector: 'Kick Boxing / Kempo' },
-      { name: 'Dorian Murray', location: 'Florida', sector: 'Kick Boxing' },
-      { name: 'Carl Noel', location: 'North Miami Beach, Florida', sector: 'Kick Boxing & Karate' },
-      { name: 'Axel Reyes', location: 'Imperial Beach, California', sector: 'Kick Boxing' },
-    ],
-  },
-  {
-    name: 'Brasile',
-    logo: '/loghi-world/logobrasile1.jpg',
-    members: [
-      { name: 'Laecio Nunes', location: 'Vitória, Espírito Santo' },
+      { name: 'Ariel Aguirre', location: 'Chabas, Santa Fe' },
+      { name: 'Martin Tello', location: '' },
     ],
   },
   {
@@ -27,6 +17,13 @@ export const countries = [
     ],
   },
   {
+    name: 'Brasile',
+    logo: '/loghi-world/logobrasile1.jpg',
+    members: [
+      { name: 'Laecio Nunes', location: 'Vitória, Espírito Santo' },
+    ],
+  },
+  {
     name: 'Chile',
     logo: '/loghi-world/logochile1.jpg',
     members: [
@@ -34,11 +31,21 @@ export const countries = [
     ],
   },
   {
-    name: 'Argentina',
-    logo: '/loghi-world/logoargentina1.jpg',
+    name: 'Gran Bretagna',
+    logo: '/loghi-world/logogranbretagna1.jpg',
     members: [
-      { name: 'Ariel Aguirre', location: 'Chabas, Santa Fe' },
-      { name: 'Martin Tello', location: '' },
+      { name: 'James Turner', location: '', role: 'President' },
+    ],
+  },
+  {
+    name: 'USA',
+    logo: '/loghi-world/logoamerica1.jpeg',
+    members: [
+      { name: 'Kyle Murray', location: 'San Diego, California', sector: 'Kick Boxing' },
+      { name: 'Ron Murray', location: 'Orange County, California', sector: 'Kick Boxing / Kempo' },
+      { name: 'Dorian Murray', location: 'Florida', sector: 'Kick Boxing' },
+      { name: 'Carl Noel', location: 'North Miami Beach, Florida', sector: 'Kick Boxing & Karate' },
+      { name: 'Axel Reyes', location: 'Imperial Beach, California', sector: 'Kick Boxing' },
     ],
   },
 ];
