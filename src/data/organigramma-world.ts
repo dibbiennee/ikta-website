@@ -34,7 +34,7 @@ export const countries = [
     name: 'Gran Bretagna',
     logo: '/loghi-world/logogranbretagna1.jpg',
     members: [
-      { name: 'James Turner', location: '', role: 'President' },
+      { name: 'James Turner', location: 'St. Austell, Cornwall', role: 'President' },
     ],
   },
   {
