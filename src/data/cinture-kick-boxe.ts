@@ -563,6 +563,8 @@ export const belts: Belt[] = [
       { name: 'Danilo Lopes', date: '7/9/2024' },
       { name: 'Cristiano Naoto', date: '8/8/2026' },
       { name: 'Wallece Cândido', date: '8/8/2026' },
+      { name: 'Ricardo Batan', date: '10/9/2026' },
+      { name: 'Maicon Stallony', date: '10/9/2026' },
     ],
   },
   {
