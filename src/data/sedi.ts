@@ -15,8 +15,11 @@ export type Sede = {
   gallery: string[];
   /** campi per lo structured data SportsActivityLocation */
   streetAddress: string;
+  postalCode: string;
   region: string;
   sports: string[];
+  /** pagina di dettaglio della sede (se esiste) */
+  url?: string;
 };
 
 export const sedi: Sede[] = [
@@ -36,6 +39,7 @@ export const sedi: Sede[] = [
       '/sedi/santamarinella/iktafotosanta5.webp',
     ],
     streetAddress: 'Via 4 Novembre 25',
+    postalCode: '00058',
     region: 'RM',
     sports: ['Kick Boxing', 'Muay Thai', 'MMA', 'Krav Maga'],
   },
@@ -60,8 +64,10 @@ export const sedi: Sede[] = [
       '/sedi/civitavecchia/iktacv11.webp',
     ],
     streetAddress: 'Via Ticino 15',
+    postalCode: '00053',
     region: 'RM',
-    sports: ['Kick Boxing', 'Muay Thai', 'MMA', 'Krav Maga'],
+    sports: ['Kick Boxing', 'K-1', 'Muay Thai', 'MMA', 'Krav Maga'],
+    url: '/palestre/civitavecchia',
   },
   {
     name: 'IKTA GYM Tolfa',
@@ -79,26 +85,33 @@ export const sedi: Sede[] = [
       '/sedi/tolfa/iktatolfa5.webp',
     ],
     streetAddress: 'Via G. Amendola 1A',
+    postalCode: '00059',
     region: 'RM',
     sports: ['Kick Boxing', 'Muay Thai', 'MMA', 'Krav Maga'],
   },
 ];
 
-/** Structured data SportsActivityLocation generato dalle sedi. */
+const SITE_URL = 'https://iktaworld.com';
+
+/** Structured data SportsActivityLocation/ExerciseGym generato dalle sedi. */
 export function sediJsonLd() {
   return sedi.map((s) => ({
     '@context': 'https://schema.org',
-    '@type': 'SportsActivityLocation',
+    '@type': ['SportsActivityLocation', 'ExerciseGym'],
     name: s.name,
-    parentOrganization: { '@type': 'SportsOrganization', name: 'IKTA Italia' },
+    parentOrganization: { '@type': 'SportsOrganization', name: 'IKTA Italia', url: SITE_URL },
     address: {
       '@type': 'PostalAddress',
       streetAddress: s.streetAddress,
       addressLocality: s.city,
+      postalCode: s.postalCode,
       addressRegion: s.region,
       addressCountry: 'IT',
     },
     telephone: s.phoneRaw,
     sport: s.sports,
+    image: SITE_URL + s.gallery[0],
+    hasMap: s.mapsUrl,
+    ...(s.url ? { url: SITE_URL + s.url } : {}),
   }));
 }

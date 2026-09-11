@@ -28,17 +28,25 @@ export default function PalestrePage() {
 
           <div className="grid gap-6 lg:gap-12">
             {sedi.map((s) => (
-              <SedeCard
-                key={s.name}
-                name={s.name}
-                color={BRAND_BLUE}
-                colorHover={BRAND_BLUE_HOVER}
-                logo={s.logo}
-                address={s.address}
-                phone={s.phone}
-                mapsUrl={s.mapsUrl}
-                gallery={s.gallery}
-              />
+              <div key={s.name}>
+                <SedeCard
+                  name={s.name}
+                  color={BRAND_BLUE}
+                  colorHover={BRAND_BLUE_HOVER}
+                  logo={s.logo}
+                  address={s.address}
+                  phone={s.phone}
+                  mapsUrl={s.mapsUrl}
+                  gallery={s.gallery}
+                />
+                {s.url && (
+                  <div className="mt-4 text-center">
+                    <Link href={s.url} className="btn btn-primary">
+                      Scheda palestra e orari
+                    </Link>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
