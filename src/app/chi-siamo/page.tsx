@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/chi-siamo' },
   title: 'Chi Siamo',
   description: 'IKTA - Intercontinental Kick Thai Boxing Association. Federazione attiva dal 2012, 50+ palestre affiliate, 22 titoli mondiali.',
 };

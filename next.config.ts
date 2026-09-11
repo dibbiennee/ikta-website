@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 import path from "node:path";
 
+const isDev = process.env.NODE_ENV !== "production";
+
 const ContentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  // 'unsafe-eval' solo in sviluppo: React lo usa per il debug. In produzione la CSP resta severa.
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
@@ -50,6 +53,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  images: {
+    qualities: [75, 80],
+  },
   turbopack: {
     root: path.resolve(__dirname),
   },
@@ -59,12 +65,6 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: securityHeaders,
       },
-    ];
-  },
-  async redirects() {
-    return [
-      // Pagina Discipline rimossa: le discipline sono ora nella home
-      { source: "/discipline", destination: "/#discipline", permanent: true },
     ];
   },
 };

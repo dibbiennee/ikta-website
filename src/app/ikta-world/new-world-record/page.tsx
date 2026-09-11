@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ikta-world/new-world-record' },
   title: 'New World Record - IKTA World',
   description: 'New World Record IKTA World.',
 };

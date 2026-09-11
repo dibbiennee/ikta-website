@@ -5,6 +5,7 @@ import EventGallery from '@/components/EventGallery';
 import RankingItalia from '@/components/RankingItalia';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/gare' },
   title: 'Gare',
   description: 'Foto e locandine delle gare IKTA, prossimi eventi e ranking ufficiale. Competizioni di Kick Boxing, Free Boxing, Muay Thai e MMA con titoli in palio.',
 };

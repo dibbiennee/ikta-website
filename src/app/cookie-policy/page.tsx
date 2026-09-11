@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/cookie-policy' },
   title: 'Cookie Policy',
   description: 'Informativa sui cookie e sulle tecnologie di tracciamento utilizzate dal sito iktaworld.com.',
   robots: { index: true, follow: true },

@@ -1,151 +1,6 @@
 'use client';
 
-const direttoriTecnici = [
-  { name: 'Andrea Massaro', role: 'Direttore Tecnico Nazionale' },
-  { name: 'Alessio Ferrazzoli', role: 'Nuovo Direttore Tecnico Nazionale', date: '6/9/2021' },
-];
-
-const istruttori = [
-  { name: 'Alessio Ferrazzoli', date: '14/3/2021' },
-  { name: 'Valentina Cionni', date: '14/3/2021' },
-  { name: 'Igor Bastioni', date: '14/3/2021' },
-];
-
-const belts = [
-  {
-    id: 'bianca',
-    label: 'Cintura Bianca',
-    color: '#e5e7eb',
-    textColor: '#111827',
-    members: [
-      { name: 'Luigi Brandi', date: '20/11/2019' },
-      { name: 'Mario Francesconi', date: '20/11/2019' },
-      { name: 'Laura Bonfiglio', date: '20/11/2019' },
-      { name: 'Flavia Di Simone', date: '20/11/2019' },
-      { name: 'Leonardo Ferri Ricchi', date: '20/11/2019' },
-      { name: 'Matteo Sarra', date: '20/11/2019' },
-    ],
-  },
-  {
-    id: 'gialla',
-    label: 'Cintura Gialla',
-    color: '#eab308',
-    textColor: '#111827',
-    members: [
-      { name: 'Ada Roberto', date: '20/11/2019' },
-      { name: 'Micaela Baglioni', date: '20/11/2019' },
-      { name: 'Luigi Buonincontro', date: '20/11/2019' },
-      { name: 'Stefano Patriarca', date: '20/11/2019' },
-    ],
-  },
-  {
-    id: 'arancione',
-    label: 'Cintura Arancione',
-    color: '#ea580c',
-    members: [
-      { name: 'Franco Carabbosio', date: '20/11/2019' },
-      { name: 'Simone Pujia', date: '20/11/2019' },
-      { name: 'Anna Di Felice', date: '14/6/2024' },
-      { name: 'Matteo Colantoni', date: '16/6/2024' },
-      { name: 'Francesco Nunez', date: '20/6/2026' },
-      { name: 'Gabriella La Torre', date: '20/6/2026' },
-    ],
-  },
-  {
-    id: 'verde',
-    label: 'Cintura Verde',
-    color: '#16a34a',
-    members: [
-      { name: 'Alberto Grassi', date: '5/12/2019' },
-      { name: 'Daniele Lauri', date: '5/12/2019' },
-      { name: 'Aurora Grossi', date: '20/6/2026' },
-    ],
-  },
-  {
-    id: 'blu',
-    label: 'Cintura Blu',
-    color: '#2563eb',
-    members: [
-      { name: 'Saverio Leo', date: '20/11/2019' },
-      { name: 'Giuseppe Bartolini', date: '16/6/2024' },
-      { name: 'Loris Marinozzi', date: '20/6/2026' },
-    ],
-  },
-  {
-    id: 'marrone',
-    label: 'Cintura Marrone',
-    color: '#92400e',
-    members: [
-      { name: 'Leonardo Marchio', date: '20/11/2019' },
-      { name: "Roberto D'Andrea", date: '20/11/2019' },
-      { name: 'Giuseppe Bartolini', date: '20/6/2026' },
-    ],
-  },
-  {
-    id: '1-dan',
-    label: 'I DAN - Cintura Nera',
-    color: '#111827',
-    members: [
-      { name: 'Luca Adinolfo', date: '5/12/2019' },
-    ],
-  },
-  {
-    id: '2-dan',
-    label: 'II DAN - Cintura Nera',
-    color: '#111827',
-    members: [],
-  },
-  {
-    id: '3-dan',
-    label: 'III DAN - Cintura Nera',
-    color: '#111827',
-    members: [
-      { name: 'Andrea Massaro', date: '22/1/2020' },
-    ],
-  },
-  {
-    id: '4-dan',
-    label: 'IV DAN - Cintura Nera',
-    color: '#111827',
-    members: [],
-  },
-  {
-    id: '5-dan',
-    label: 'V DAN - Cintura Nera',
-    color: '#111827',
-    members: [],
-  },
-  {
-    id: '6-dan',
-    label: 'VI DAN - Cintura Nera',
-    color: '#111827',
-    members: [],
-  },
-  {
-    id: '7-dan',
-    label: 'VII DAN - Cintura Nera',
-    color: '#111827',
-    members: [],
-  },
-  {
-    id: '8-dan',
-    label: 'VIII DAN - Cintura Nera',
-    color: '#111827',
-    members: [],
-  },
-  {
-    id: '9-dan',
-    label: 'IX DAN - Cintura Nera',
-    color: '#111827',
-    members: [],
-  },
-  {
-    id: 'rossa',
-    label: 'Cintura Rossa',
-    color: '#dc2626',
-    members: [],
-  },
-];
+import { direttoriTecnici, istruttori, belts } from '@/data/cinture-krav-maga';
 
 export default function CintureKravMagaPage() {
   return (
@@ -258,7 +113,7 @@ export default function CintureKravMagaPage() {
             {/* Belt Header */}
             <div style={{
               background: belt.color,
-              color: (belt as any).textColor || 'white',
+              color: belt.textColor || 'white',
               borderRadius: '16px',
               padding: '20px 28px',
               marginBottom: '20px',
@@ -275,18 +130,14 @@ export default function CintureKravMagaPage() {
 
             {/* Members */}
             {belt.members.length > 0 ? (
-              <div style={{ borderRadius: '12px', overflow: 'hidden', border: '1px solid #e5e7eb' }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {belt.members.map((m, i) => (
-                  <div key={`${m.name}-${m.date}-${i}`} style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    padding: '10px 20px',
-                    backgroundColor: i % 2 === 0 ? '#fff' : '#f9fafb',
-                    borderBottom: i < belt.members.length - 1 ? '1px solid #f3f4f6' : 'none',
-                  }}>
-                    <span style={{ fontSize: '14px', fontWeight: 500, color: '#111827' }}>{m.name}</span>
-                    <span style={{ fontSize: '12px', color: '#6b7280', whiteSpace: 'nowrap', marginLeft: '16px' }}>{m.date}</span>
+                  <div
+                    key={`${m.name}-${m.date}-${i}`}
+                    className="flex items-center justify-between rounded-lg border border-gray-200 bg-white px-4 py-2.5"
+                  >
+                    <span className="text-sm font-medium text-gray-900">{m.name}</span>
+                    <span className="ml-4 whitespace-nowrap text-xs text-gray-500">{m.date}</span>
                   </div>
                 ))}
               </div>

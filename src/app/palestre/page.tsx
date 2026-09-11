@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SedeCard from '@/components/SedeCard';
+import { sedi } from '@/data/sedi';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/palestre' },
   title: 'Palestre IKTA',
   description: 'Trova le palestre IKTA Gym affiliate. Sedi ufficiali per Kick Boxing, Muay Thai e altre discipline.',
 };
@@ -25,61 +27,19 @@ export default function PalestrePage() {
           </div>
 
           <div className="grid gap-6 lg:gap-12">
-            <SedeCard
-              name="IKTA GYM Santa Marinella"
-              color={BRAND_BLUE}
-              colorHover={BRAND_BLUE_HOVER}
-              logo="/sedi/santamarinella/iktasantalogo.webp"
-              address="Via 4 Novembre n 25, Santa Marinella"
-              phone="+39 348 5913895"
-              mapsUrl="https://maps.google.com/?q=Via+4+Novembre+25+Santa+Marinella"
-              gallery={[
-                '/sedi/santamarinella/iktafotosanta1.webp',
-                '/sedi/santamarinella/iktafotosanta2.webp',
-                '/sedi/santamarinella/iktafotosanta3.webp',
-                '/sedi/santamarinella/iktafotosanta4.webp',
-                '/sedi/santamarinella/iktafotosanta5.webp',
-              ]}
-            />
-
-            <SedeCard
-              name="IKTA GYM Civitavecchia"
-              color={BRAND_BLUE}
-              colorHover={BRAND_BLUE_HOVER}
-              logo="/sedi/civitavecchia/iktacvlogo.webp"
-              address="Via Ticino n 15, Civitavecchia"
-              phone="+39 338 4012397"
-              mapsUrl="https://maps.google.com/?q=Via+Ticino+15+Civitavecchia"
-              gallery={[
-                '/sedi/civitavecchia/iktacv1.webp',
-                '/sedi/civitavecchia/iktacv2.webp',
-                '/sedi/civitavecchia/iktacv4.webp',
-                '/sedi/civitavecchia/iktacv5.webp',
-                '/sedi/civitavecchia/iktacv6.webp',
-                '/sedi/civitavecchia/iktacv7.webp',
-                '/sedi/civitavecchia/iktacv8.webp',
-                '/sedi/civitavecchia/iktacv9.webp',
-                '/sedi/civitavecchia/iktacv10.webp',
-                '/sedi/civitavecchia/iktacv11.webp',
-              ]}
-            />
-
-            <SedeCard
-              name="IKTA GYM Tolfa"
-              color={BRAND_BLUE}
-              colorHover={BRAND_BLUE_HOVER}
-              logo="/sedi/tolfa/iktatolfalogo.webp"
-              address="Via G. Amendola 1A, Tolfa"
-              phone="+39 338 4012397"
-              mapsUrl="https://maps.google.com/?q=Via+Amendola+1A+Tolfa"
-              gallery={[
-                '/sedi/tolfa/iktatolfa.webp',
-                '/sedi/tolfa/iktatolfa1.webp',
-                '/sedi/tolfa/iktatolfa2.webp',
-                '/sedi/tolfa/iktatolfa4.webp',
-                '/sedi/tolfa/iktatolfa5.webp',
-              ]}
-            />
+            {sedi.map((s) => (
+              <SedeCard
+                key={s.name}
+                name={s.name}
+                color={BRAND_BLUE}
+                colorHover={BRAND_BLUE_HOVER}
+                logo={s.logo}
+                address={s.address}
+                phone={s.phone}
+                mapsUrl={s.mapsUrl}
+                gallery={s.gallery}
+              />
+            ))}
           </div>
 
           <div className="text-center px-4 sm:px-0 mt-16">

@@ -2,8 +2,9 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/ikta-world' },
   title: 'IKTA World',
-  description: 'IKTA World - Organigramma, Titoli, Ranking, Cinture e Record mondiali.',
+  description: 'IKTA World: la dimensione internazionale della federazione. Organigramma, titoli mondiali, ranking, sistema cinture e record omologati.',
 };
 
 const sections = [

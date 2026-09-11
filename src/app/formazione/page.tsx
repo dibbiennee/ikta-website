@@ -2,118 +2,13 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import CorsiAccordion from '@/components/CorsiAccordion';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import { alboAllenatori, alboIstruttori, alboMaestri, alboUfficiali } from '@/data/albo';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/formazione' },
   title: 'Formazione',
   description: 'Corsi IKTA per allenatori, istruttori e maestri di Kick Boxing, Muay Thai e MMA. Formazione certificata con rilascio qualifica federale.',
 };
-
-const alboAllenatori = [
-  { name: 'Andrea Gufi', discipline: 'Kick Boxing', date: '05/05/2009' },
-  { name: 'Nicola De Prisco', discipline: 'Kick Boxing', date: '05/05/2009' },
-  { name: 'Enzo Abuashesh', discipline: 'K1 Style', date: '09/09/2012' },
-  { name: 'Francesco Albani', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Sergio Bernabei', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Pamela Paluzzi', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Ivan Anastasi', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Gianmarco Pozzi', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Umberto Castagna', discipline: 'Kick Boxing', date: '25/03/2013' },
-  { name: 'Antonio La Musta', discipline: 'K1 Style', date: '20/09/2014' },
-  { name: 'Stefano Sgrulloni', discipline: 'Kick Boxing', date: '08/01/2016' },
-  { name: 'Manuel Mammetti', discipline: 'Pugilato', date: '28/01/2026' },
-];
-
-const alboIstruttori = [
-  { name: 'Giuseppe Quadrani', discipline: 'Kick Boxing', date: '25/03/2008' },
-  { name: 'Luca Valentini', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Paolo Fildigrano', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Roberto Petretti', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Enzo Abiushesh', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Victor Hrepaco', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Antonio Esposito', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Alessandro Melone', discipline: 'Kick Boxing', date: '14/09/2013' },
-  { name: 'Francesco Malatesta', discipline: 'Muay Thai', date: '18/01/2014' },
-  { name: 'Mauro Noci', discipline: 'K1 Style', date: '20/09/2014' },
-  { name: 'Voltarelli Andrea', discipline: 'Kick Boxing', date: '08/11/2014' },
-  { name: 'Marco Squarcialupi', discipline: 'Kick Boxing', date: '08/11/2014' },
-  { name: 'Samuele Squarcialupi', discipline: 'Kick Boxing', date: '08/11/2014' },
-  { name: 'Leonardo Cartocci', discipline: 'Kick Boxing', date: '08/11/2014' },
-  { name: 'Alessandro Pali', discipline: 'Kick Boxing', date: '08/11/2014' },
-  { name: 'Francesco Conti', discipline: 'Kick Boxing', date: '08/11/2014' },
-  { name: 'Alessandro Mileto', discipline: 'Kick Boxing', date: '08/11/2014' },
-  { name: 'Cristian Jakini', discipline: 'Kick Boxing', date: '08/11/2014' },
-  { name: 'Paolo Gianfranceschi', discipline: 'Kick Boxing', date: '08/11/2014' },
-  { name: 'Samet Vay', discipline: 'Muay Thai', date: '20/12/2014' },
-  { name: 'Mino Russo', discipline: 'Kick Boxing', date: '22/03/2015' },
-  { name: 'Denis Kovachev', discipline: 'Kick Boxing', date: '22/03/2015' },
-  { name: 'Alessandro Ruschi', discipline: 'Kick Boxing', date: '22/03/2015' },
-  { name: 'Elio Bargigli', discipline: 'Muay Thai', date: '19/06/2015' },
-  { name: 'Marco Negrisolo', discipline: 'Muay Thai', date: '19/06/2015' },
-  { name: 'Marco Sabbatini', discipline: 'Kick Boxing', date: '23/03/2016' },
-  { name: 'Maurilio Giaffreda', discipline: 'Krav Maga', date: '23/03/2016' },
-  { name: 'Maurilio Giaffreda', discipline: 'MMA', date: '23/03/2016' },
-  { name: 'Maurilio Giaffreda', discipline: 'Kick Boxing', date: '23/03/2016' },
-  { name: 'Emanuele Vaccarini', discipline: 'Krav Maga', date: '23/03/2016' },
-  { name: 'Daniele Viti', discipline: 'Kick Boxing', date: '08/04/2016' },
-  { name: 'Simone Capocchia', discipline: 'Kick Boxing', date: '08/04/2016' },
-  { name: 'Silviu Cocos', discipline: 'Kick Boxing', date: '10/06/2016' },
-  { name: 'Gambara Caius', discipline: 'Kick Boxing', date: '10/06/2016' },
-  { name: 'Giusti Marco', discipline: 'Kick Boxing', date: '10/06/2016' },
-  { name: 'Narcis Dumitri', discipline: 'Kick Boxing', date: '10/06/2016' },
-  { name: 'Patrik Benati', discipline: 'Kick Boxing', date: '10/06/2016' },
-  { name: 'Alessandro Casani', discipline: 'Kick Boxing', date: '15/06/2016' },
-  { name: 'Paolo Gianfranceschi', discipline: 'MMA', date: '24/06/2016' },
-  { name: 'Elena Petriccione', discipline: 'Kick Boxing', date: '26/11/2016' },
-  { name: 'Alessio Crescentini', discipline: 'Kick Boxing', date: '26/11/2016' },
-  { name: 'Aron Catalin', discipline: 'Kick Boxing', date: '26/11/2016' },
-  { name: 'Rodio Pasquale', discipline: 'Kick Boxing', date: '26/11/2016' },
-  { name: 'Marcello Giannini', discipline: 'Kick Boxing', date: '26/11/2016' },
-  { name: 'Antonio Tullio', discipline: 'Kick Boxing', date: '26/02/2017' },
-  { name: 'Bruno Pagliai', discipline: 'Kick Boxing', date: '26/02/2017' },
-  { name: 'Valerio Vannucci', discipline: 'Kick Boxing', date: '26/02/2017' },
-  { name: 'Adriano Marchesini', discipline: 'Kick Boxing', date: '11/02/2018' },
-  { name: 'Lobrano Pasqualino', discipline: 'Kick Boxing', date: '11/02/2018' },
-  { name: 'Michele Montemurro', discipline: 'Kick Boxing', date: '11/02/2018' },
-  { name: 'Luigi Pia', discipline: 'Kick Boxing', date: '21/12/2020' },
-  { name: 'Alessio Ferrazzoli', discipline: 'Krav Maga', date: '14/03/2021' },
-  { name: 'Valentina Cionni', discipline: 'Krav Maga', date: '14/03/2021' },
-  { name: 'Igor Bastioni', discipline: 'Krav Maga', date: '14/03/2021' },
-  { name: 'Marco Caramelli', discipline: 'Pugilato', date: '28/01/2026' },
-  { name: 'Antonio Giacomini', discipline: 'Pugilato', date: '28/01/2026' },
-  { name: 'Rebecca Pallotta', discipline: 'Kick Boxing', date: '11/06/2026' },
-  { name: 'Simone Simonante', discipline: 'Pugilato', date: '11/06/2026' },
-];
-
-const alboMaestri = [
-  { name: 'Alessio Panetta', discipline: 'Kick Boxing', date: '23/03/2013' },
-  { name: 'Hermann Di Mauro', discipline: 'Kick Boxing', date: '08/09/2014' },
-  { name: 'Francesco La Barbera', discipline: 'Kick Boxing', date: '22/03/2015' },
-  { name: 'Giuseppe Mariotti', discipline: 'Kick Boxing', date: '03/08/2015' },
-  { name: 'Umberto Lucci', discipline: 'Kick Boxing', date: '08/01/2016' },
-  { name: 'Giuseppe Mariotti', discipline: 'K1 Style', date: '24/06/2016' },
-  { name: 'Massimiliano Bottoni', discipline: 'Pugilato', date: '19/03/2025' },
-  { name: 'Marcello Giannini', discipline: 'Kick Boxing', date: '28/01/2026' },
-];
-
-const alboUfficiali = [
-  { name: 'Luca Iarlori', date: '11/11/2011' },
-  { name: 'Enzo Abuashesh', date: '11/11/2011' },
-  { name: 'Scandale Stefano', date: '11/11/2011' },
-  { name: 'Giulia Cerri', date: '11/11/2011' },
-  { name: 'Paolo Fildigrano', date: '04/04/2013' },
-  { name: 'Ivan Anastasi', date: '04/04/2013' },
-  { name: 'Alessandro Casani', date: '28/04/2013' },
-  { name: 'Giuseppe Quadrani', date: '28/04/2013' },
-  { name: 'Francesco Albani', date: '28/04/2013' },
-  { name: 'Ivan Ascensi', date: '28/04/2013' },
-  { name: 'Antonio Papale', date: '04/10/2013' },
-  { name: 'Lucci Ilaria', date: '10/10/2013' },
-  { name: 'Daniela Benedetti', date: '10/10/2013' },
-  { name: 'Maurizio Cancedda', date: '07/12/2014' },
-  { name: 'Marco Crisostomi', date: '07/12/2014' },
-  { name: 'Marco Alaimo', date: '07/12/2014' },
-];
-
 
 export default function FormazionePage() {
   return (

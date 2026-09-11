@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import CookieBanner from "@/components/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,13 +19,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/' },
   metadataBase: new URL("https://iktaworld.com"),
   title: {
     default: "IKTA Italia | Federazione Kick Boxing, Muay Thai, MMA e Krav Maga",
     template: "%s | IKTA",
   },
   description:
-    "IKTA - Intercontinental Kick Thai Boxing Association. Federazione internazionale di sport da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga, BJJ e Boxe. 50+ palestre affiliate in Italia, formazione certificata e gare ufficiali.",
+    "Federazione di sport da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga, BJJ e Boxe. Formazione certificata, gare ufficiali e titoli omologati.",
   keywords: [
     "IKTA",
     "federazione kick boxing",
@@ -113,6 +116,8 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieBanner />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

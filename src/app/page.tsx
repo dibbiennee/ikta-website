@@ -3,8 +3,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import HeroCarousel from '@/components/HeroCarousel';
 import SedeCard from '@/components/SedeCard';
+import { sedi, sediJsonLd } from '@/data/sedi';
+import { disciplines, stats } from '@/data/home';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/' },
   title: 'IKTA Italia | Federazione Kick Boxing, Muay Thai, MMA e Krav Maga',
   description: 'IKTA - Intercontinental Kick Thai Boxing Association. Federazione internazionale di sport da combattimento: Kick Boxing, Muay Thai, MMA, Krav Maga, BJJ e Boxe. 50+ palestre affiliate, formazione certificata e gare ufficiali.',
   keywords: ['IKTA', 'kick boxing', 'muay thai', 'MMA', 'krav maga', 'BJJ', 'arti marziali', 'federazione', 'Italia'],
@@ -26,93 +29,11 @@ export const metadata: Metadata = {
 const BRAND_BLUE = '#1e40af';
 const BRAND_BLUE_HOVER = '#1e3a8a';
 
-const disciplines = [
-  {
-    name: 'Kick Boxing',
-    description: 'Pugni e calci. Tecnica di boxe occidentale unita ad arti marziali orientali.',
-  },
-  {
-    name: 'Muay Thai',
-    description: 'L\'arte delle otto armi: pugni, calci, gomiti e ginocchia.',
-  },
-  {
-    name: 'MMA',
-    description: 'Striking e grappling in una sola disciplina. Versatilita totale.',
-  },
-  {
-    name: 'Krav Maga',
-    description: 'Difesa personale israeliana. Pragmatica, diretta, efficace.',
-  },
-  {
-    name: 'Boxe',
-    description: 'Pugilato classico. Solo pugni, footwork e timing.',
-  },
-  {
-    name: 'Brazilian Jiu Jitsu',
-    description: 'Lotta a terra, leve e sottomissioni. Tecnica sopra la forza.',
-  },
-];
-
-const stats = [
-  { value: '22', label: 'Titoli Mondiali' },
-  { value: '50+', label: 'Palestre Affiliate' },
-  { value: '1000+', label: 'Atleti Tesserati' },
-  { value: '8', label: 'Discipline' },
-];
-
-const sediJsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "IKTA GYM Santa Marinella",
-    "parentOrganization": { "@type": "SportsOrganization", "name": "IKTA Italia" },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Via 4 Novembre 25",
-      "addressLocality": "Santa Marinella",
-      "addressRegion": "RM",
-      "addressCountry": "IT",
-    },
-    "telephone": "+393485913895",
-    "sport": ["Kick Boxing", "Muay Thai", "MMA", "Krav Maga"],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "IKTA GYM Civitavecchia",
-    "parentOrganization": { "@type": "SportsOrganization", "name": "IKTA Italia" },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Via Ticino 15",
-      "addressLocality": "Civitavecchia",
-      "addressRegion": "RM",
-      "addressCountry": "IT",
-    },
-    "telephone": "+393384012397",
-    "sport": ["Kick Boxing", "Muay Thai", "MMA", "Krav Maga"],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsActivityLocation",
-    "name": "IKTA GYM Tolfa",
-    "parentOrganization": { "@type": "SportsOrganization", "name": "IKTA Italia" },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Via G. Amendola 1A",
-      "addressLocality": "Tolfa",
-      "addressRegion": "RM",
-      "addressCountry": "IT",
-    },
-    "telephone": "+393384012397",
-    "sport": ["Kick Boxing", "Muay Thai", "MMA", "Krav Maga"],
-  },
-];
-
 export default function Home() {
   return (
     <>
       {/* JSON-LD Schema per le sedi */}
-      {sediJsonLd.map((sede, i) => (
+      {sediJsonLd().map((sede, i) => (
         <script
           key={i}
           type="application/ld+json"
@@ -125,25 +46,24 @@ export default function Home() {
         {/* Background Carousel */}
         <HeroCarousel />
 
-        {/* Dark gradient overlay per leggibilita testo sopra immagine */}
-        <div className="absolute inset-0 z-[5] bg-gradient-to-b from-black/30 via-black/40 to-black/70 pointer-events-none" />
+        {/* Gradient overlay navy (brand) per leggibilita testo, senza spegnere le foto */}
+        <div className="absolute inset-0 z-[5] bg-gradient-to-b from-[#0B2340]/45 via-[#0B2340]/55 to-[#0B2340]/85 pointer-events-none" />
 
         {/* Content Container */}
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-16 pt-[clamp(5rem,12vh,12rem)]">
           <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center gap-5 md:gap-7">
-            <span className="eyebrow !text-white/80">Federazione internazionale</span>
+            <span className="eyebrow !text-[#eab308]">Federazione Internazionale</span>
 
-            <h1 className="!text-white drop-shadow-2xl">
-              Intercontinental Kick Thai Boxing Association
+            <h1 className="!text-white drop-shadow-2xl max-w-2xl !tracking-normal !font-semibold !text-[1.75rem] sm:!text-4xl md:!text-[2.75rem] !leading-[1.15]">
+              Kick Boxing, Muay Thai, MMA, Krav Maga e altre discipline.
+              <span className="block mt-3 sm:mt-4 !font-normal text-gray-200 !text-lg sm:!text-xl md:!text-2xl drop-shadow-md">
+                Gare ufficiali e titoli.
+              </span>
             </h1>
-
-            <p className="text-base sm:text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed text-center drop-shadow-md px-4">
-              Kick Boxing, Thai Boxe e altre discipline. Formazione certificata, gare ufficiali, ranking e titoli omologati.
-            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 px-4 sm:px-0">
-              <Link href="/#discipline" className="btn btn-primary">
+              <Link href="/discipline" className="btn btn-primary">
                 Le Nostre Discipline
               </Link>
               <Link
@@ -169,6 +89,45 @@ export default function Home() {
                 <div className="text-xs sm:text-sm text-gray-400 mt-1 uppercase tracking-wider">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Percorsi per pubblico */}
+      <section className="section section-muted">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center mb-8 sm:mb-12">
+            <span className="eyebrow mb-3">Da dove vuoi iniziare</span>
+            <h2 className="text-center">Il tuo percorso in IKTA</h2>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            <div className="card flex flex-col text-center">
+              <h3 className="!text-xl mb-2">Gestisci una palestra?</h3>
+              <p className="text-sm text-gray-600 flex-1">
+                Entra nella rete IKTA: formazione certificata, gare ufficiali, assicurazione atleti e visibilità.
+              </p>
+              <Link href="/affiliazione" className="btn btn-primary mt-4 w-full">
+                Affilia la tua palestra
+              </Link>
+            </div>
+            <div className="card flex flex-col text-center">
+              <h3 className="!text-xl mb-2">Vuoi allenarti?</h3>
+              <p className="text-sm text-gray-600 flex-1">
+                Trova la palestra IKTA più vicina e allenati con istruttori certificati.
+              </p>
+              <Link href="/palestre" className="btn btn-secondary mt-4 w-full">
+                Trova la sede
+              </Link>
+            </div>
+            <div className="card flex flex-col text-center">
+              <h3 className="!text-xl mb-2">Vuoi insegnare?</h3>
+              <p className="text-sm text-gray-600 flex-1">
+                Diventa istruttore, allenatore o maestro con i corsi di formazione IKTA.
+              </p>
+              <Link href="/formazione" className="btn btn-secondary mt-4 w-full">
+                Scopri i corsi
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -226,61 +185,19 @@ export default function Home() {
           </div>
 
           <div className="grid gap-6 lg:gap-12">
-            <SedeCard
-              name="IKTA GYM Santa Marinella"
-              color={BRAND_BLUE}
-              colorHover={BRAND_BLUE_HOVER}
-              logo="/sedi/santamarinella/iktasantalogo.webp"
-              address="Via 4 Novembre n 25, Santa Marinella"
-              phone="+39 348 5913895"
-              mapsUrl="https://maps.google.com/?q=Via+4+Novembre+25+Santa+Marinella"
-              gallery={[
-                '/sedi/santamarinella/iktafotosanta1.webp',
-                '/sedi/santamarinella/iktafotosanta2.webp',
-                '/sedi/santamarinella/iktafotosanta3.webp',
-                '/sedi/santamarinella/iktafotosanta4.webp',
-                '/sedi/santamarinella/iktafotosanta5.webp',
-              ]}
-            />
-
-            <SedeCard
-              name="IKTA GYM Civitavecchia"
-              color={BRAND_BLUE}
-              colorHover={BRAND_BLUE_HOVER}
-              logo="/sedi/civitavecchia/iktacvlogo.webp"
-              address="Via Ticino n 15, Civitavecchia"
-              phone="+39 338 4012397"
-              mapsUrl="https://maps.google.com/?q=Via+Ticino+15+Civitavecchia"
-              gallery={[
-                '/sedi/civitavecchia/iktacv1.webp',
-                '/sedi/civitavecchia/iktacv2.webp',
-                '/sedi/civitavecchia/iktacv4.webp',
-                '/sedi/civitavecchia/iktacv5.webp',
-                '/sedi/civitavecchia/iktacv6.webp',
-                '/sedi/civitavecchia/iktacv7.webp',
-                '/sedi/civitavecchia/iktacv8.webp',
-                '/sedi/civitavecchia/iktacv9.webp',
-                '/sedi/civitavecchia/iktacv10.webp',
-                '/sedi/civitavecchia/iktacv11.webp',
-              ]}
-            />
-
-            <SedeCard
-              name="IKTA GYM Tolfa"
-              color={BRAND_BLUE}
-              colorHover={BRAND_BLUE_HOVER}
-              logo="/sedi/tolfa/iktatolfalogo.webp"
-              address="Via G. Amendola 1A, Tolfa"
-              phone="+39 338 4012397"
-              mapsUrl="https://maps.google.com/?q=Via+Amendola+1A+Tolfa"
-              gallery={[
-                '/sedi/tolfa/iktatolfa.webp',
-                '/sedi/tolfa/iktatolfa1.webp',
-                '/sedi/tolfa/iktatolfa2.webp',
-                '/sedi/tolfa/iktatolfa4.webp',
-                '/sedi/tolfa/iktatolfa5.webp',
-              ]}
-            />
+            {sedi.map((s) => (
+              <SedeCard
+                key={s.name}
+                name={s.name}
+                color={BRAND_BLUE}
+                colorHover={BRAND_BLUE_HOVER}
+                logo={s.logo}
+                address={s.address}
+                phone={s.phone}
+                mapsUrl={s.mapsUrl}
+                gallery={s.gallery}
+              />
+            ))}
           </div>
 
           <div className="text-center px-4 sm:px-0 mt-16">
