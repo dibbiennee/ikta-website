@@ -292,7 +292,7 @@ export default function Header() {
                             ? 'text-[#eab308]'
                             : 'text-white'
                         }`}
-                        style={{ fontSize: 'clamp(1.2rem, 5vw, 1.45rem)', padding: '0.6rem 1rem' }}
+                        style={{ fontSize: 'clamp(1.2rem, 5vw, 1.45rem)', padding: '0.75rem 1rem' }}
                       >
                         <span>{item.name}</span>
                         <svg
@@ -326,13 +326,13 @@ export default function Header() {
                               });
                               return groups.map((g) =>
                                 g.items.length > 1 ? (
-                                  <div key={g.key} className="flex gap-4" style={{ padding: '0.25rem 1rem 0.25rem 2rem' }}>
+                                  <div key={g.key} className="flex gap-4" style={{ padding: '0 1rem 0 2rem' }}>
                                     {g.items.map((subItem) => (
                                       <Link
                                         key={subItem.name}
                                         href={subItem.href}
-                                        className="text-white/70 hover:text-white active:text-[#eab308] transition-colors"
-                                        style={{ fontSize: 'clamp(0.8rem, 3vw, 0.9rem)' }}
+                                        className="flex items-center text-white/70 hover:text-white active:text-[#eab308] transition-colors"
+                                        style={{ fontSize: 'clamp(0.85rem, 3.2vw, 0.95rem)', minHeight: '44px' }}
                                         onClick={(e) => {
                                           handleAnchorClick(e, subItem.href);
                                           setMobileMenuOpen(false);
@@ -347,8 +347,8 @@ export default function Header() {
                                   <Link
                                     key={g.items[0].name}
                                     href={g.items[0].href}
-                                    className="block text-white/70 hover:text-white active:text-[#eab308] transition-colors"
-                                    style={{ fontSize: 'clamp(0.8rem, 3vw, 0.9rem)', padding: '0.25rem 1rem 0.25rem 2rem' }}
+                                    className="flex items-center text-white/70 hover:text-white active:text-[#eab308] transition-colors"
+                                    style={{ fontSize: 'clamp(0.85rem, 3.2vw, 0.95rem)', minHeight: '44px', padding: '0.25rem 1rem 0.25rem 2rem' }}
                                     onClick={(e) => {
                                       handleAnchorClick(e, g.items[0].href);
                                       setMobileMenuOpen(false);
@@ -368,7 +368,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       className="font-bold text-white transition-colors block hover:text-[#eab308]"
-                      style={{ fontSize: 'clamp(1.2rem, 5vw, 1.45rem)', padding: '0.6rem 1rem' }}
+                      style={{ fontSize: 'clamp(1.2rem, 5vw, 1.45rem)', padding: '0.75rem 1rem' }}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}

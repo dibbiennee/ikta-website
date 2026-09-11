@@ -70,7 +70,7 @@ export default function PrivacyPage() {
 
             <div>
               <h2 className="!text-2xl mb-3">4. Base giuridica</h2>
-              <p>Il trattamento si fonda su una o piu delle seguenti basi giuridiche, a seconda dell&apos;attivita:</p>
+              <p>Il trattamento si fonda su una o più delle seguenti basi giuridiche, a seconda dell&apos;attività:</p>
               <ul className="list-disc list-inside space-y-2 ml-2">
                 <li><strong>Consenso</strong> dell&apos;interessato (art. 6.1.a GDPR), per le comunicazioni facoltative e i cookie non strettamente necessari</li>
                 <li><strong>Esecuzione di un contratto o misure precontrattuali</strong> (art. 6.1.b GDPR), per la gestione di iscrizioni, tesseramenti e affiliazioni</li>
@@ -92,14 +92,14 @@ export default function PrivacyPage() {
 
             <div>
               <h2 className="!text-2xl mb-3">6. Soggetti destinatari dei dati</h2>
-              <p>I dati possono essere trattati, per nostro conto e in qualita di responsabili del trattamento, dai seguenti fornitori tecnici:</p>
+              <p>I dati possono essere trattati, per nostro conto e in qualità di responsabili del trattamento, dai seguenti fornitori tecnici:</p>
               <ul className="list-disc list-inside space-y-2 ml-2">
                 <li><strong>Vercel Inc.</strong> (hosting del sito) - Server in Unione Europea. <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#1e40af] underline">Privacy policy Vercel</a></li>
                 <li><strong>Indian Type Foundry (Fontshare)</strong> (CDN dei font) - Trasferimento al di fuori UE possibile. <a href="https://www.fontshare.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#1e40af] underline">Privacy policy Fontshare</a></li>
                 <li><strong>Google Ireland Limited</strong> (Google Maps embed nelle pagine contatti e palestre) - Trasferimento extra-UE secondo standard contrattuali tipo. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#1e40af] underline">Privacy policy Google</a></li>
               </ul>
               <p className="mt-3">
-                I dati non vengono ceduti, venduti o comunicati a soggetti terzi diversi da quelli sopra elencati e dalle autorita pubbliche eventualmente legittimate a riceverli per legge.
+                I dati non vengono ceduti, venduti o comunicati a soggetti terzi diversi da quelli sopra elencati e dalle autorità pubbliche eventualmente legittimate a riceverli per legge.
               </p>
             </div>
 
@@ -114,7 +114,7 @@ export default function PrivacyPage() {
                 <li><strong>Portabilita</strong>: ricevere i tuoi dati in formato strutturato e di uso comune</li>
                 <li><strong>Opposizione</strong> al trattamento basato su legittimo interesse</li>
                 <li><strong>Revoca del consenso</strong> in qualsiasi momento, senza pregiudicare la liceita del trattamento precedente</li>
-                <li><strong>Reclamo all&apos;autorita di controllo</strong>: il <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-[#1e40af] underline">Garante per la Protezione dei Dati Personali</a></li>
+                <li><strong>Reclamo all&apos;autorità di controllo</strong>: il <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" className="text-[#1e40af] underline">Garante per la Protezione dei Dati Personali</a></li>
               </ul>
               <p className="mt-3">
                 Per esercitare i tuoi diritti scrivi a <a href="mailto:massimo.brizi@tiscali.it" className="text-[#1e40af] underline">massimo.brizi@tiscali.it</a>. Risponderemo entro 30 giorni.

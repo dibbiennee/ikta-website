@@ -11,7 +11,7 @@ export const disciplines = [
   },
   {
     name: 'MMA',
-    description: 'Striking e grappling in una sola disciplina. Versatilita totale.',
+    description: 'Striking e grappling in una sola disciplina. Versatilità totale.',
   },
   {
     name: 'Krav Maga',
@@ -24,6 +24,14 @@ export const disciplines = [
   {
     name: 'Brazilian Jiu Jitsu',
     description: 'Lotta a terra, leve e sottomissioni. Tecnica sopra la forza.',
+  },
+  {
+    name: 'Kung Fu Sanda',
+    description: 'La versione sportiva del Kung Fu cinese. Calci, pugni e proiezioni su pedana.',
+  },
+  {
+    name: 'Karate',
+    description: 'Arte marziale giapponese. Colpi netti, kata e disciplina.',
   },
 ];
 

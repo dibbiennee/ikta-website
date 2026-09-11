@@ -57,7 +57,7 @@ export default function PalestrePage() {
             Vuoi aprire una sede IKTA Gym?
           </h2>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Affilia la tua palestra a IKTA: supporto tecnico, formazione certificata e visibilita nazionale.
+            Affilia la tua palestra a IKTA: supporto tecnico, formazione certificata e visibilità nazionale.
           </p>
           <Link href="/affiliazione" className="btn btn-primary">
             Richiedi Affiliazione

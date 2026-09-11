@@ -3,6 +3,7 @@ import Link from 'next/link';
 import CorsiAccordion from '@/components/CorsiAccordion';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import { alboAllenatori, alboIstruttori, alboMaestri, alboUfficiali } from '@/data/albo';
+import { courses } from '@/data/corsi';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/formazione' },
@@ -11,8 +12,41 @@ export const metadata: Metadata = {
 };
 
 export default function FormazionePage() {
+  const coursesJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': courses.flatMap((c) =>
+      c.levels.map((lvl) => ({
+        '@type': 'Course',
+        name: `Corso Istruttore ${c.discipline} - ${lvl.name}`,
+        description: lvl.description,
+        provider: {
+          '@type': 'SportsOrganization',
+          name: 'IKTA - Intercontinental Kick Thai Boxing Association',
+          url: 'https://iktaworld.com',
+        },
+        url: 'https://iktaworld.com/formazione',
+        hasCourseInstance: {
+          '@type': 'CourseInstance',
+          courseMode: 'Online',
+        },
+        offers: {
+          '@type': 'Offer',
+          price: lvl.price,
+          priceCurrency: 'EUR',
+          availability: 'https://schema.org/InStock',
+          url: 'https://iktaworld.com/formazione',
+        },
+      }))
+    ),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(coursesJsonLd) }}
+      />
+
       {/* 1. CORSI */}
       <section id="corsi" className="section pt-28 md:pt-32">
         <div className="container mx-auto px-4">

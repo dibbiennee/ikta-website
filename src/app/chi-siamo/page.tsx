@@ -22,7 +22,7 @@ export default function ChiSiamoPage() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20">
             <div className="order-2 lg:order-1">
               <h3 className="mb-4 text-center lg:!text-left">
-                Sport da combattimento, regolati con serieta dal 2012
+                Sport da combattimento, regolati con serietà dal 2012
               </h3>
               <p className="text-base md:text-lg text-gray-600 mb-4 leading-relaxed text-center lg:text-left">
                 IKTA riunisce Kick Boxing, Thai Boxe, MMA, Krav Maga e altre discipline da combattimento sotto un unico organigramma. Per ogni atleta e palestra forniamo: percorsi ufficiali per allenatori, istruttori e maestri, programmi cinture, regolamenti, ranking e omologazione dei titoli.

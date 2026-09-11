@@ -47,27 +47,24 @@ export default function CookieBanner() {
       aria-label="Informativa cookie"
       className="fixed inset-x-0 bottom-0 z-50 px-4 pb-4 sm:px-6 sm:pb-6 safe-area-bottom"
     >
-      <div className="mx-auto max-w-3xl bg-white border border-gray-200 rounded-2xl shadow-2xl p-5 sm:p-6">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div className="text-sm text-gray-700 leading-relaxed">
-            <p className="font-semibold text-gray-900 mb-1">Usiamo cookie tecnici e servizi di terze parti.</p>
-            <p>
-              Per offrirti il sito (font, mappe, hosting) usiamo strumenti che possono raccogliere il tuo IP. Nessun cookie di profilazione o pubblicita.
-              Leggi la <Link href="/cookie-policy" className="text-[#1e40af] underline font-medium">Cookie Policy</Link>.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-2 md:flex-shrink-0">
+      <div className="mx-auto max-w-3xl bg-white border border-gray-200 rounded-2xl shadow-2xl p-4 sm:p-5">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <p className="text-xs sm:text-sm text-gray-700 leading-snug">
+            Cookie tecnici e servizi di terze parti (font, mappe, hosting). Nessun cookie di profilazione o pubblicità.{' '}
+            <Link href="/cookie-policy" className="text-[#1e40af] underline font-medium">Cookie Policy</Link>.
+          </p>
+          <div className="flex flex-row gap-2 md:flex-shrink-0">
             <button
               type="button"
               onClick={() => persist('necessary')}
-              className="btn btn-ghost border border-gray-300 !text-sm !py-2 !px-4"
+              className="btn btn-ghost border border-gray-300 !text-xs sm:!text-sm !py-2 !px-3 flex-1 md:flex-none"
             >
               Solo necessari
             </button>
             <button
               type="button"
               onClick={() => persist('all')}
-              className="btn btn-primary !text-sm !py-2 !px-4"
+              className="btn btn-primary !text-xs sm:!text-sm !py-2 !px-3 flex-1 md:flex-none"
             >
               Accetta tutti
             </button>

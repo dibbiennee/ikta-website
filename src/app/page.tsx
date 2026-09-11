@@ -137,7 +137,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center mb-8 sm:mb-12">
             <span className="eyebrow mb-3">Le discipline</span>
-            <h2 className="text-center">Sei modi di combattere</h2>
+            <h2 className="text-center">Otto modi di combattere</h2>
             <p className="text-base text-gray-600 max-w-2xl text-center px-2 mt-3">
               Dall&apos;arte tradizionale allo sport moderno: regolamenti ufficiali e percorsi formativi dedicati per ogni disciplina.
             </p>

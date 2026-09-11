@@ -45,7 +45,7 @@ const benefits = [
     ),
   },
   {
-    title: 'Visibilita',
+    title: 'Visibilità',
     description: 'Inserimento sul sito ufficiale IKTA e sui canali social della federazione.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
