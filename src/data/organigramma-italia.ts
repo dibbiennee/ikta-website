@@ -25,6 +25,48 @@ export const direttoriTecnici = [
 
 export const regionali = [
   {
+    name: 'Abruzzo',
+    logo: '/logoabruzzoikta.png',
+    members: [
+      { name: 'Giuseppe Mariotti' },
+    ],
+  },
+  {
+    name: 'Calabria',
+    logo: '/logocalabriaikta.png',
+    members: [
+      { name: 'Pasquale Rodio' },
+    ],
+  },
+  {
+    name: 'Campania',
+    logo: '/logocampaniaikta.png',
+    members: [
+      { name: 'Nino Laudisio' },
+    ],
+  },
+  {
+    name: 'Lazio',
+    logo: '/logolazioikta.png',
+    members: [
+      { name: 'Andrea Rinaldi' },
+    ],
+  },
+  {
+    name: 'Marche',
+    logo: '/logomarcheikta.png',
+    members: [
+      { name: 'Paolo Gianfranceschi' },
+    ],
+  },
+  {
+    name: 'Puglia',
+    logo: '/logopugliaikta.png',
+    members: [
+      { name: 'Angelo Menna' },
+    ],
+  },
+  {
     name: 'Sardegna',
     logo: '/logosardegnaikta.jpg',
     members: [
@@ -36,6 +78,13 @@ export const regionali = [
     logo: '/logosiciliaikta.jpg',
     members: [
       { name: 'Reymond Giuffrida' },
+    ],
+  },
+  {
+    name: 'Toscana',
+    logo: '/logotoscanaikta.png',
+    members: [
+      { name: 'Samet Vay' },
     ],
   },
 ];
