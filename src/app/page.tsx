@@ -52,13 +52,9 @@ export default function Home() {
         {/* Content Container */}
         <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-16 pt-[clamp(5rem,12vh,12rem)]">
           <div className="w-full max-w-4xl mx-auto flex flex-col items-center text-center gap-5 md:gap-7">
-            <span className="eyebrow !text-[#eab308]">Federazione Internazionale</span>
-
-            <h1 className="!text-white drop-shadow-2xl max-w-2xl !tracking-normal !font-semibold !text-[1.75rem] sm:!text-4xl md:!text-[2.75rem] !leading-[1.15]">
-              Kick Boxing, Muay Thai, MMA, Krav Maga e altre discipline.
-              <span className="block mt-3 sm:mt-4 !font-normal text-gray-200 !text-lg sm:!text-xl md:!text-2xl drop-shadow-md">
-                Gare ufficiali e titoli.
-              </span>
+            <h1 className="!text-white drop-shadow-2xl !tracking-normal !font-semibold !text-[1.5rem] sm:!text-4xl md:!text-[2.75rem] !leading-[1.15]">
+              <span className="block">Intercontinental</span>{' '}
+              <span className="block">Kick Thai Boxing Association</span>
             </h1>
 
             {/* CTA Buttons */}
