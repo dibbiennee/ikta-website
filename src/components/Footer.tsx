@@ -10,7 +10,6 @@ const footerLinks = {
   ],
   servizi: [
     { name: 'Formazione', href: '/formazione' },
-    { name: 'Affiliazione', href: '/affiliazione' },
     { name: 'Gare e Ranking', href: '/gare' },
     { name: 'Palestre IKTA', href: '/palestre' },
   ],

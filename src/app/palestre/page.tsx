@@ -57,21 +57,6 @@ export default function PalestrePage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="section-dark section">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-6">
-            Vuoi aprire una sede IKTA Gym?
-          </h2>
-          <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Affilia la tua palestra a IKTA: supporto tecnico, formazione certificata e visibilità nazionale.
-          </p>
-          <Link href="/affiliazione" className="btn btn-primary">
-            Richiedi Affiliazione
-          </Link>
-        </div>
-      </section>
     </>
   );
 }
