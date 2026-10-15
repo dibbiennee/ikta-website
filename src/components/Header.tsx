@@ -204,16 +204,6 @@ export default function Header() {
               ))}
             </div>
 
-            {/* CTA Button - Desktop */}
-            <div className="hidden lg:block">
-              <Link
-                href="/affiliazione"
-                className="btn btn-primary text-sm"
-              >
-                Affiliati Ora
-              </Link>
-            </div>
-
             {/* Mobile Menu Button - Animated Hamburger */}
             <button
               type="button"
@@ -241,7 +231,7 @@ export default function Header() {
 
       {/* Mobile Menu - Half Screen from Top */}
       <div
-        className={`lg:hidden fixed top-0 left-0 w-full h-[70vh] z-[70] transform transition-all duration-400 ease-out overflow-hidden rounded-b-3xl shadow-2xl ${
+        className={`lg:hidden fixed top-0 left-0 w-full h-[88dvh] z-[70] transform transition-all duration-400 ease-out overflow-hidden rounded-b-3xl shadow-2xl ${
           mobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
         style={{ background: 'linear-gradient(180deg, #1e40af 0%, #1e3a8a 50%, #0f172a 100%)' }}
@@ -275,7 +265,7 @@ export default function Header() {
         {/* Menu Content */}
         <div className="h-[calc(100%-80px)] flex flex-col overflow-hidden" style={{ padding: '0.25rem 1.5rem 1.5rem 1.5rem' }}>
           {/* Navigation */}
-          <div className="flex-1">
+          <div className="flex-1 min-h-0 overflow-y-auto">
             <div className="divide-y divide-white/10">
               {navigation.map((item, index) => (
                 <div
@@ -381,14 +371,6 @@ export default function Header() {
 
           {/* CTA Buttons at Bottom */}
           <div className="flex flex-col gap-2" style={{ margin: '0.75rem 0.5rem 0 0.5rem' }}>
-            <Link
-              href="/affiliazione"
-              className="flex items-center justify-center w-full py-3 bg-[#eab308] text-gray-900 font-bold rounded-xl shadow-lg hover:bg-[#ca8a04] transition-all active:scale-[0.98]"
-              style={{ fontSize: 'clamp(0.95rem, 3.5vw, 1.1rem)' }}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Affiliati Ora
-            </Link>
             <a
               href="https://www.instagram.com/iktaitalia?igsh=MWhxb3A1b2QxMHc2OQ%3D%3D&utm_source=qr"
               target="_blank"
